@@ -1,0 +1,80 @@
+\documentclass [spanish,12pt]{article}
+\usepackage[activeacute]{babel}
+%\usepackage{ulem}
+\usepackage{shapepar}
+\usepackage{picinpar}
+\usepackage{enumerate}
+\usepackage{endnotes}
+\usepackage{multicol}
+\setlength{\topmargin}{ -0.4in} \setlength{\oddsidemargin}{0.1in}
+\setlength{\textheight}{8.9in} \setlength{\textwidth}{6.5in}
+\newcommand{\noin}{\noindent}
+\newcommand{\spi}{\vskip .05 in}
+\pagestyle{plain}
+%  \usepackage{graphics}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+%  \usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage[dvips]{color}
+%\usepackage{graphicx,color}
+\usepackage[dvips]{graphicx}
+\usepackage{epsfig}
+\usepackage{graphicx,color}
+\include{psfig}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%\newtheorem{ejemplo}[teorema]{Ejemplo}
+
+\begin{document}
+
+\section{Herramientas b\'asicas de Formato}
+
+\subsection{El m'etodo del descenso infinito}
+
+El siguiente m'etodo de demostraci'on fue utilizado frecuentemente 
+por Pierre Fermat (1601-1665) por lo que a 'el se le atribuye. Por lo general, 
+es usado para demostrar que algo no sucede. 
+Por ejemplo, Fermat lo utiliz'o
+para mostrar que no hay soluciones enteras de la ecuaci'on $x^4 + y^4=z^2$, 
+con $xyz\neq 0$.
+
+
+La base te'orica de su m'etodo es que no hay una colecci'on 
+infinita de enteros positivos que sea decreciente, esto es, no podemos 
+encontrar una infinidad de enteros positivos que cumplan 
+$n_1 > n_2 > n_3>\cdots$.
+
+\noindent Hay dos maneras de usar esta idea para demostrar afirmaciones. 
+La primera es tener una afirmaci'on $\mathcal{P}(n_1)$ que se supone v'alida. 
+Si de 'esta se puede encontrar un entero positivo $n_2 <n_1$ tal que  
+$\mathcal{P}(n_2)$ es v'alida y, a su vez, si de 'esta se encuentra un 
+entero positivo $n_3< n_2$ tal que  $\mathcal{P}(n_3)$ es v'alida, y as'i 
+sucesivamente, entonces una infinidad de enteros positivos se genera de tal 
+forma  que cumple que $n_1>n_2>n_3>\cdots$, pero esto es imposible, por lo 
+que  $\mathcal{P}(n_1)$ no es verdadera. Veamos un ejemplo para ilustrar este 
+m'etodo.
+
+\vspace{.2in}
+
+\noindent {\bf Ejemplo.}\\
+El n'umero $\sqrt{2}$ no es un n'umero racional.
+
+\vspace{.2in}
+
+\noindent Supongamos que $\sqrt 2$ es un n'umero racional, entonces 
+$\sqrt 2=\frac{m_1}{n_1}$, con $m_1$ y $n_1$ n'umeros enteros positivos.
+Como $\sqrt{2}+1=\frac{1}{\sqrt{2}-1}$, tenemos que
+$$
+ \sqrt{2}+1=\frac{1}{\frac{m_1}{n_1}-1}=\frac{n_1}{m_1-n_1},\quad\text{por lo que}\quad   \sqrt{2}=\frac{n_1}{m_1-n_1}-1=\frac{2n_1-m_1}{m_1-n_1}.
+$$
+
+\noindent Como  $1< \sqrt{2}<2$, sustituyendo el supuesto valor racional de $\sqrt{2}$ se tiene que  $1< \frac{m_1}{n_1}<2$, de donde
+$n_1 < m_1 < 2n_1$. De aqu'i tenemos que, $2n_1-m_1 >0$ y $m_1- n_1 >0$. Luego, si definimos $m_2=2n_1-m_1$ y $n_2=m_1-n_1$, tenemos que $m_2< m_1$ y   $n_2<n_1$, ya que $n_1<m_1$ y $m_1<2n_1$, respectivamente. Luego, $\sqrt{2}=\frac{m_1}{n_1}=\frac{m_2}{n_2}$, con $m_2<m_1$ y $n_2<n_1$. Siguiendo este proceso, podemos generar una infinidad de enteros positivos $m_i$ y $n_i$ que cumplen que
+$$ \sqrt{2} =\frac{m_1}{n_1}=\frac{m_2}{n_2}=\frac{m_3}{n_3}=\cdots,$$
+con $m_1 >m_2>m_3>\cdots$ y $n_1 >n_2>n_3>\cdots$,
+pero esto no es posible. Por lo tanto, $\sqrt{2}$ no es un n'umero racional.
+
+ 
+
+\end{document}
