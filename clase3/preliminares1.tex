@@ -1,0 +1,500 @@
+\section{N'umeros}
+\label{numeros}
+
+\noindent Consideramos que el lector est'a familiarizado con el conjunto de 
+n'umeros que se utilizan para contar. A este conjunto se le conoce como el 
+conjunto de  n'umeros naturales y se denota por
+$\nn$, es decir, \index{N'umeros naturales}
+$$
+     \nn = \{1,2,3,\dots\}.
+$$
+En este conjunto estamos acostumbrados a realizar dos operaciones, la suma y la multiplicaci'on, 
+entendiendo con esto que si sumamos o multiplicamos dos n'u\-meros del conjunto obtenemos otro n'umero natural. 
+A estas operaciones las conocemos como la suma  (o adici'on) y la multiplicaci'on (o producto). En \linebreak algunos libros el 0 se considera tambi'en como un n'umero natural, sin embargo, en este libro no, pero convenimos que 0 es tal que $n+0=n$, para todo n'umero natural $n$. 
+
+Ahora, supongamos que deseamos resolver la ecuaci'on $x+a = 0$, con $a\in \nn$, es decir, encontrar una $x$ para la cual la igualdad anterior se cumpla.  
+Esta ecuaci'on no tiene soluci'on en el conjunto de los n'umeros naturales $\nn$, por lo cual necesitamos definir un conjunto de n'umeros que incluya al 
+conjunto de n'umeros $\nn$ y a sus negativos.  Es decir, necesitamos extender el conjunto de los n'umeros
+$\nn$ para que este tipo de ecuaciones tengan soluci'on en el nuevo conjunto.   A este  conjunto lo llamamos el conjunto de los  n'umeros enteros y lo  denotamos por $\zz$, es decir,\index{N'umeros enteros}
+$$
+     \zz = \{\dots, -3 ,-2, -1, 0, 1, 2, 3,\dots\}.
+$$
+En este conjunto tambi'en hay dos operaciones, la suma y la
+multiplicaci'on,  que satisfacen las siguientes propiedades.
+
+
+\begin{propiedades}
+\begin{description}
+\item[$(a)$] La suma y la multiplicaci'on de n'umeros enteros son operaciones 
+conmutativas. 
+Esto es, si $a,\,b\in \zz$, entonces
+$$
+       a+b= b+a\quad \text{y}\quad ab = b a.
+$$
+\item[$(b)$] La suma y el producto de n'umeros enteros son operaciones 
+asociativas. Esto es, 
+si $a,\,b\,
+\text{y}\; c\in \zz$, entonces
+$$
+       (a+b)+c= a+(b+c) \quad \text{y}\quad (ab)c= a(bc).
+$$
+\item[$(c)$] Existe en $\zz$ un elemento neutro para la suma, el n'umero 0. 
+Es decir,
+si $a\,\in \zz$, entonces
+$$
+       a+0= 0+a=a.
+$$
+\item[$(d)$] Existe en $\zz$  un elemento neutro para la multiplicaci'on, el 
+n'umero 1.
+Es decir,
+si $a\,\in \zz$, entonces
+$$
+       a1= 1a=a.
+$$
+\item[$(e)$] Para cada $a\,\in\zz$ existe  su inverso aditivo que se
+denota por $-a$. Esto es,
+$$
+       a+(-a)= (-a)+a=0.
+$$
+\item[$(f)$] En $\zz$, el producto se  distribuye con respecto a la suma.  
+Es decir, si
+$a$, $b$ y $c \in \zz$, entonces
+\begin{equation*}
+       a(b+c) =   ab+ac.
+\end{equation*}
+\end{description}
+\end{propiedades}
+
+
+\vei
+
+Notemos que la existencia del inverso aditivo nos permite resolver cualquier 
+ecuaci'on del tipo mencionado, es decir, $x+a= b$, donde $a$ y $b$ son 
+n'umeros enteros. Sin embargo,
+no existe necesariamente un n'umero entero $x$ que resuelva la ecuaci'on 
+$qx=p$, con
+$p$ y $q$ n'umeros enteros, por lo que nuevamente surge la necesidad de 
+extender el  conjunto de n'umeros.  Consideramos ahora el  conjunto de los 
+n'umeros 
+racionales, que denotamos  como $\qq$, es decir,  \index{N'umeros racionales}
+$$
+     \qq = \left \{\frac{p}{q} \ | \ p\in \zz \ \text{y} \ q\in 
+\zz\backslash \{0\}  \right \}.
+$$
+En general, para trabajar con los n'umeros racionales $\frac{p}{q}$ pedimos 
+que $p$ y $q$ no tengan factores primos comunes, es decir, que sean primos 
+relativos, esto lo denotamos como $(p,q)=1$.
+En el conjunto de n'umeros racionales  tambi'en existen las operaciones de 
+suma y  producto, las cuales cumplen las mismas propie\-dades que los n'umeros 
+enteros.  Adem'as, en el producto existe otra  propiedad: la existencia del inverso multiplicativo.
+
+\begin{propiedad}
+Si $\frac{p}{q}\in \qq$, con $p\neq 0$ y $(p,q)=1$, entonces existe un 
+'unico n'umero, $\frac{q}{p}\in \qq$, llamado el inverso multiplicativo 
+de $\frac{p}{q}$ tal que
+$$
+               \frac{p}{q}\cdot \frac{q}{p} = 1.
+$$
+\end{propiedad}
+\index{N'umeros racionales}
+
+
+\noindent Con esta nueva propiedad tenemos garant'ia de poder resolver cualquier ecuaci'on de la forma $q x = p$. Sin embargo, existen n'umeros que no podemos escribir como cociente de dos n'umeros enteros, por ejemplo, si queremos resolver la ecuaci'on  $x^2-2=0$, 'esta no tiene soluci'on en el conjunto de los 
+n'umeros $\qq$. Las soluciones de la ecuaci'on son 
+$x=\pm\sqrt{2}$ y mostramos que $\sqrt{2}$ no est'a en $\qq$.
+
+\begin{proposicion}
+El n'umero $\sqrt{2}$ no es un n'umero racional.
+\end{proposicion}
+
+\demostracion{Supongamos lo contrario, es decir, que $\sqrt{2}$ es un n'umero racional, entonces lo podemos escribir como $\sqrt{2}=\frac{p}{q}$, donde $p$ y $q$ no tienen factores comunes. Elevando al cuadrado de ambos lados tenemos que
+$2=\frac{p^2}{q^2}$, es decir, $2q^2= p^2$. Esto quiere decir, que $p^2$ es un 
+n'umero par, pero entonces el mismo $p$ es par.  Pero si $p$ es par, digamos de la forma $p=2m$,  entonces $2q^2= (2m)^2= 4m^2$. Dividiendo entre 2 ambos lados de  la ecuaci'on tenemos que $q^2=2m^2$, esto es, $q^2$ es par y entonces $q$ es tambi'en par. As'i, $p$ y $q$ son pares,  contradiciendo el hecho de que $p$ y $q$ no tienen factores comunes.  Por lo tanto, $\sqrt{2}$ no es un n'umero 
+racional.
+}
+
+Podemos dar una representaci'on geom'etrica de los n'umeros racionales como puntos sobre una recta, que llamamos la 
+{\bf recta num'erica}\index{Recta!num'erica}. Una recta la podemos recorrer en dos sentidos, a uno de ellos le llamamos  
+{\bf sentido positivo} y al otro {\bf sentido negativo}. Una vez convenido cual es el sentido positivo decimos que tenemos 
+una {\bf recta orientada}\index{Recta!orientada}. Por ejemplo, podemos convenir que el sentido positivo es el que va de 
+izquierda a derecha. Si consideramos dos puntos $O$ y $U$ en la recta, le daremos la misma orientaci'on al segmento que a 
+la recta que lo contiene. Esto es, tomando el punto $O$ como el 0 y 
+$U$  a la derecha de 'el, decimos que el segmento $OU$ se recorre en el sentido positivo. Si el punto $U$ representa al 1, 
+llamamos a $OU$ un segmento orientado y unitario. As'i, podemos ir colocando, hacia la derecha, todos los n'umeros enteros 
+positivos a lo largo de la recta separados, cada dos consecutivos,  una distancia $OU$. Para representar los n'umeros enteros 
+negativos basta que hagamos lo mismo pero ahora iniciando en $O$ y recorriendo la recta en sentido negativo.
+
+El n'umero racional de la forma $\frac{p}{q}$, lo definimos como el segmento orientado
+$\frac{p}{q}  OU$
+que es el segmento que se obtiene al sumar $p$ veces la $q$-'esima parte del segmento $OU$.  Con m'as precisi'on, hacemos lo siguiente:
+
+$(a)$ Dividimos en $q$ partes iguales el segmento $OU$. Para esto, trazamos una
+recta auxiliar por $O$  y sobre ella tomamos $q$ puntos $W_1$, $\dots$, $W_q$, 
+donde dos consecutivos est'an separados una distancia $OW_1$. Ahora, se une 
+$W_q$ con $U$ y por cada uno de los puntos $W_j$ se traza una recta paralela a
+$UW_q$, los puntos de corte de las paralelas con $OU$ ser'an los puntos de 
+divisi'on de $OU$ en $q$ partes iguales. Si $V$ es el punto de corte de la
+paralela $UW_q$ por $W_1$, se tendr'a que $V$ es el punto que representa al 
+n'umero $\frac{1}{q}$ (note que $OV$ tiene la misma orientaci'on de $OU$).  
+Consideramos  tambi'en $V^\prime$ el punto sim'etrico, con respecto a $O$, de 
+$V$.  En la siguiente figura, hemos tomado $q=4$
+
+\centerline{
+\psset{unit=1.5cm}
+\begin{pspicture}(0,-2)(0,2.5)
+       \psline(-4,0)(4,0)
+        \psline(-2,-2)(2,2)
+       	\psline(.3,.28)(.5,0)
+        \psline(.58,.58)(1,0)
+        \psline(.88,.88)(1.5,0)
+         \psline(1.18,1.18)(2,0)
+	\psline(-.5,0)(-.3,-.28)
+       	\psline(-1,0)(-.58,-.58)
+        \psline(-1.5,0)(-.88,-.88)
+        \psline(-2,0)(-1.18,-1.18)
+        \psdot(2,0)
+        \psdot(4,0)
+        \psdot(.5,0)
+       \psdot(-.5,0)	
+       \psdot(1,0)
+        \psdot(1.5,0)
+       \psdot(.58,.58)
+       \psdot(.88,.88)
+       \psdot(1.18,1.18)
+       \psdot(-2,0)
+       \psdot(-1.18,-1.18)
+        \psdot(.3,.3)
+        \psdot(-4,0)
+         \psdot(-1,0)
+        \psdot(-1.5,0)
+        \psdot(-1,0)
+         \psdot(-.3,-.3)
+        \psdot(-.58,-.6)
+       \psdot(-.88,-.9)
+        \psdot(-1.5,0)
+        \rput(0,-.3){$O$}
+        \rput(0,.2){$0$}
+	\rput(2,-.2){$U$}
+	\rput(2.1,.2){$1$}
+        \rput(4,.2){$2$}
+       \rput(.5,-.2){$V$}
+       \rput(-.5,.2){$V^\prime$}
+       \rput(.2,.5){$W_1$}
+       \rput(1.05,1.4){$W_q$}
+     \end{pspicture}
+}
+
+
+$(b)$ Si $p$ es un n'umero entero no negativo, tomamos
+$$
+         OP=\underbrace{OV+OV+\cdots+OV}_{p\,\text{ veces}} = p \cdot OV.
+$$
+El segmento $OP$ es, por definici'on, $\frac{p}{q} OU$.  En la siguiente 
+figura marcamos al punto $P$, con $p=6$ y $q=4$
+
+\centerline{
+\psset{unit=1.5cm}
+\begin{pspicture}(0,-1)(0,1)
+       \psline(-4,0)(4,0)
+        \psdot(2,0)
+        \psdot(4,0)
+        \psdot(.5,0)	
+       \psdot(1,0)
+        \psdot(1.5,0)
+       \psdot(-2,0)
+       \psdot(2.5,0)
+        \psdot(3,0)
+       \psdot(0,0)
+        \rput(0,-.3){$O$}
+        \rput(0,.3){$0$}
+	\rput(2,-.3){$U$}
+        \rput(-2,-.3){$U^\prime$}
+	\rput(2,.3){$1$}
+        \rput(4,.3){$2$}
+       \rput(3,-.3){$P$}
+     \end{pspicture}
+}
+
+$(c)$ Si $p$ es negativo, sea $p^\prime$ el n'umero entero positivo tal que $p=-p^\prime$. Tomamos entonces
+$$
+         OP=\underbrace{OV^\prime+OV^\prime+\cdots+OV^\prime}_{p^\prime\,\text{ veces}} = p^\prime OV^\prime=(-p^\prime) OV=p \cdot OV.
+$$
+El segmento $OP$ es, por definici'on, $\frac{p}{q} OU$.  Como $OU$ es el segmento unitario, a este punto lo denotamos simplemente como  $\frac{p}{q}$.
+
+\vei
+
+Con esta representaci'on de los n'umeros racionales, tenemos que todo n'umero racional est'a representado por un punto en la recta num'erica, pero hay puntos en la recta num'erica que no representan ning'un  n'umero racional.  Por ejemplo, determinemos en la recta num'erica el n'umero $\sqrt{2}$, que ya vimos que no es un n'umero racional.  Si tomamos un tri'angulo rect'angulo con catetos de longitud 1, entonces, por el teorema de Pit'agoras, la hipotenusa de este tri'angulo mide $\sqrt{2}$.  Si tomamos un comp'as y trazamos una circunferencia de radio $\sqrt{2}$ y centro en $0$, el punto donde la circunferencia intersecta a la parte 
+positiva de la recta num'erica es el punto en la recta num'erica que 
+corresponde a $\sqrt{2}$.
+
+\centerline{
+\psset{unit=1.5cm}
+\begin{pspicture}(0,-.5)(3,2.5)
+       \psline(-1,0)(4,0)
+        \psdot(2,0)
+        \psdot(2,2)
+        \psline(2,0)(2,2)(0,0)	
+       \psarc(0,0){2.83}{0}{45}
+        \rput(0,-.3){$O$}
+        \rput(0,.3){$0$}
+	\rput(2,-.3){$U$}
+        \rput(1,-.2){$1$}
+	\rput(2.3,1){$1$}
+        \rput(.8,1.1){$\sqrt{2}$}
+       \rput(2.83,-.2){$\sqrt{2}$}
+     \end{pspicture}
+}
+\noindent Un punto de la recta num'erica que no corresponda 
+a un n'umero racional representar'a a un n'umero irracional y al conjunto de 
+los n'umeros irracionales lo denotamos por $\ii$.
+\index{N'umeros irracionales}
+
+A la uni'on de estos dos conjuntos, le llamamos el conjunto de los n'umeros 
+reales y lo denotamos como $\rr$, es decir, 
+$\rr=\qq\cup\ii$.\index{N'umeros reales}
+
+\noindent El conjunto de los n'umeros $\rr$ contiene al conjunto de los n'umeros naturales, al  de los n'umeros enteros y al de los n'umeros racionales.  De hecho, tenemos las siguientes contenciones $\nn\subset\zz\subset\qq\subset\rr$.
+
+\vei
+
+Dados dos puntos en la recta num'erica que sabemos representan a dos n'umeros reales, podemos localizar al punto que es la suma de ellos  de la siguiente manera:  si $P$ y $Q$ son dos puntos sobre la recta y $O$ es el origen,  la suma ser'a la suma de  los segmentos dirigidos $OP$ y $OQ$, como se muestra en la siguiente figura.
+
+
+\centerline{
+\psset{unit=1.5cm}
+\begin{pspicture}(0,-1)(-1,2)
+       \psline(-4,0)(2,0)
+        \psdot(-2,0)
+        \psdot(-3,0)	
+        \psdot(0,0)
+        \psdot(1,0)
+        \psline(-3,.7)(-2.9,.8)(-2.6,.8)(-2.5,.9)(-2.4,.8)(-2.1,.8)(-2,.7)		
+      \psline(-3,.5)(-2.9,.6)(-1.6,.6)(-1.5,.7)(-1.4,.6)(-.1,.6)(0,.5)
+	\psline(-3,1.3)(-2.9,1.4)(-1.1,1.4)(-1,1.5)(-.9,1.4)(.9,1.4)(1,1.3)
+      \psline(0,.5)(.1,.6)(.4,.6)(.5,.7)(.6,.6)(.9,.6)(1,.5)		
+        \rput(-3,-.3){$O$}
+        \rput(-3,.3){$0$}
+	\rput(-2,-.3){$P$}
+        \rput(0,-.3){$Q$}
+        	\rput(-2.5,1.15){$OP$}
+	\rput(.5,.9){$OP$}
+        	\rput(-1.5,.9){$OQ$}
+	\rput(1,-.3){$P+Q$}
+	\rput(-1,1.7){$OP+OQ$}
+     \end{pspicture}
+}
+
+Asimismo, podemos encontrar el punto que representa el producto de dos puntos $P$ y $Q$  sobre la recta num'erica como sigue.  Consideremos una recta auxiliar que ser'a una  copia de la recta real con el mismo origen $O$.  Localizamos en la recta auxiliar la unidad $U$ y el punto $Q$. Por $Q$ trazamos la recta paralela a $UP$ la cual intersecta a la recta real en $R$.
+
+
+Como los tri'angulos  $ORQ$ y $OPU$ son semejantes tenemos que
+$\frac{OR}{OP}=\frac{OQ}{OU}$ por lo que $OR\cdot OU=OP\cdot OQ$,
+de donde $OR$ representa al producto de $P$ y $Q$.
+
+\centerline{
+\psset{unit=1.5cm}
+\begin{pspicture}(0,-1.3)(2,2.5)
+       \psline(-1.5,0)(3,0)
+       \psline(-1,-1)(2,2)       
+       \psline(.58,.58)(1,0)
+       \psline(1.18,1.18)(2,0)
+       \psdot(1,0)
+       \psdot(.58,.58)
+       \psdot(2,0)
+       \psdot(1.18,1.18)
+       \rput(1,1.35){$Q$}
+       \rput(0,-.2){$O$}
+       \rput(2,-.2){$R$}
+       \rput(.5,.8){$U$}
+       \rput(1,-.2){$P$}
+     \end{pspicture}
+}
+
+
+Con esto podemos localizar la suma y el producto de cualesquiera dos n'u\-meros  
+reales sobre la recta num'erica, sin importar si son n'umeros racionales o 
+irracionales.  
+
+Al igual que en el conjunto de los n'umeros enteros,  
+las operaciones en el conjunto de n'umeros reales cumplen  todas las  
+propiedades mencionadas.
+
+\begin{propiedades}
+\begin{description}
+\item[$(a)$] La suma de dos n'umeros reales es un n'umero real.
+\item[$(b)$] La suma de dos n'umeros reales es conmutativa.
+\item[$(c)$] La suma es asociativa.
+\item[$(d)$] El n'umero $0$ es el neutro aditivo. Es decir, $x+0=x$, para todo $x \in \rr$.
+\item[$(e)$] Todo n'umero real $x$ tiene un inverso aditivo. Es decir, existe un n'umero real que se denota por $-x$ y cumple que  $x+(-x)= 0$.
+\item[$(f)$] El producto de dos n'umeros reales es un n'umero real.
+\item[$(g)$] El producto  es conmutativo.
+\item[$(h)$] El producto  es asociativo.
+\item[$(i)$] El n'umero $1$ es el neutro multiplicativo. Es decir, $x\cdot 1=x$, para todo $x \in \rr$.
+\item[$(j)$] Todo n'umero real $x$ distinto de $0$, tiene inverso multiplicativo.  Es decir, existe  un n'umero real que se denota por $x^{-1}$, tal que
+$x\cdot x^{-1} =1$.
+\item[$(k)$] El producto distribuye a la suma, es decir, si
+$x$, $y$, $z\in \rr$, entonces
+$$
+      x \left(y+z\right ) = x\cdot y+ x\cdot z.
+$$
+\end{description}
+\end{propiedades}
+
+
+
+\noindent En los n'umeros enteros tenemos un orden. Con esto queremos se\~nalar que  dados dos n'umeros enteros $a$ y $b$ podemos decir cual es el mayor de ellos.  Decimos que $a$ {\bf es mayor que} $b$ si $a-b$ es un n'umero natural, en s'imbolos tenemos\index{N'umeros!mayor que}
+$$
+       a > b \;\;\text{si y s'olo si}\;\; a-b \in\nn.
+$$
+Esto es equivalente a decir que $a-b>0$.
+
+\noindent En general, la notaci'on $a>b$ es equivalente a $b<a$.  La expresi'on $a\geq b$ significa que $a>b$ o $a=b$. An'alogamente, $a\leq b$ significa que $a < b$ o $a=b$.
+
+
+\begin{propiedades}
+Si $a$ es un n'umero entero, se cumple una y solamente una de las condiciones siguientes:
+\begin{description}
+\item[$(a)$] $a>0$,
+\item[$(b)$] $a=0$,
+\item[$(c)$] $a<0$.
+\end{description}
+\end{propiedades}
+
+En los n'umeros racionales y en los n'umeros reales tambi'en hay un orden.   El orden en los n\'umeros reales
+nos permitir\'a comparar dos n\'umeros y
+decidir cual de ellos es mayor o bien si son iguales. A fin de evitar
+justificaciones tediosas, asumiremos que en los n\'umeros reales hay un
+conjunto $P$ que llamamos el conjunto de n\'umeros positivos, y
+simb\'olicamente escribimos $x>0$, para decir que un n\'umero $x$
+est\'a en $P$. En la representaci'on geom'etrica de los n'umeros reales, el conjunto $P$ en la 
+recta num'erica es, de las dos partes en que $O$ ha dividido a la recta, la parte que contiene a $U$ (el $1$). Resaltamos que se cumplen las   propiedades siguientes.
+
+\ve
+
+\begin{propiedad}
+Cada n\'umero real $x$ tiene una y s\'olo una de
+las siguientes caracter\'{\i}sticas:
+\label{tricotomia}
+\begin{description}
+\item[$ (a)$] $x=0$.
+\item[$(b)$] $x \in P$ (esto es $x>0$).
+\item[$(c)$]$-x\in P$ (esto es $-x>0$).
+\end{description}
+\end{propiedad}
+
+\begin{propiedad} 
+Sean $x$, $y$ n'umeros reales.
+\begin{description}
+\item[$(a)$] Si $x$, $y \in P$, entonces $x+y\in P$
+\noindent (en s\'{\i}mbolos $x>0$, $y>0\Rightarrow x+y>0$).
+\label{propsuma}
+\item[$(b)$] Si $x$, $y\in P$, entonces $xy\in P$
+(en s\'{\i}mbolos $x>0$, $y>0\Rightarrow xy>0$).
+\label{propproducto}
+\end{description}
+\end{propiedad}
+
+\noindent Ahora podemos definir la relaci\'on $x$ {\bf es mayor que}
+\index{N'umeros!mayor que} $y$,
+si $x-y\in P$ (en s\'{\i}mbolos $x>y$). An\'alogamente, $x$ {\bf es menor
+que}\index{N'umeros!menor que} $y$, si $y-x\in P$ (en s\'{\i}mbolos $x<y$).
+Observemos que
+$x<y$ es equivalente a $y>x$. Definimos tambi\'en, $x$ {\bf es menor o igual
+que}\index{N'umeros!menor o igual que} $y$, si $x<y$ o $x=y$,
+(en s\'{\i}mbolos $x\leq y$).
+
+\noindent Denotamos al conjunto $P$ de
+n\'umeros reales positivos por $\rr^{+}$.
+
+\begin{ejemplo}  Sean $x$, $y$, $z$ n'umeros reales.
+\begin{description}
+\item[$(a)$] Si $x<y$, entonces $x+z<y+z$.
+\item[$(b)$] Si $x<y$ y $z>0$, entonces $xz<yz$.
+\label{ordenenlosreales}
+\end{description}
+\end{ejemplo}
+
+\noindent En efecto, para mostrar $(a)$ tenemos que $x+z<y+z$ si y s'olo si
+$(y+z)-(x+z)>0$ si y s'olo si $y-x>0$ si y s'olo si $x<y$. Para ver $(b)$, tenemos
+que $x<y$ implica $y-x>0$ y como $z>0$, resulta que $(y-x)z>0$, luego
+$yz-xz>0$ y entonces $xz<yz$.
+
+\ve 
+
+
+\input{preliminares1-1}
+
+
+
+\index{Sistema decimal}
+\noindent El sistema decimal es un sistema posicional en el que
+cada d'igito toma un valor de acuerdo a su posici'on con relaci'on al punto
+decimal. Esto es, el d'igito se multiplica por una potencia de 10.  
+Para el d'igito de las unidades, o sea, el
+d'igito que est'a inmediatamente a la izquierda del punto decimal, lo  tenemos que multiplicar por $10^n$, con $n=0$.  El d'igito de las decenas lo multiplicamos por $10^1=10$. El exponente
+aumenta de uno en uno conforme nos movemos a la izquierda y disminuye de uno en uno conforme nos movemos a la derecha. Por ejemplo,
+$$
+    87325.31= 8\cdot 10^4+7 \cdot 10^3+3\cdot 10^2+2\cdot 10^1+5\cdot 10^0+3\cdot 10^{-1}+1\cdot 10^{-2}.
+$$
+
+\vei
+
+En general, todo n'umero real puede escribirse como una expansi'on decimal 
+infinita de la siguiente manera
+$$
+                 b_m\dots b_1b_0.a_1a_2a_3\dots,
+$$
+donde los $b_i$ y los $a_i$ est'an en $\{0,1,\dots,9\}$. Los puntos suspensivos
+de la derecha significan que despu'es del punto decimal podemos tener una 
+infinidad de d'igitos, as'i el n'umero $ b_m\dots b_1b_0.a_1a_2a_3\dots$, 
+representa al n'umero real 
+$$
+b_m\cdot 10^m+\cdots+b_1 \cdot 10^1+b_0\cdot 10^0+a_1\cdot 
+10^{-1}+a_2\cdot 10^{-2}+\cdots.
+$$
+Por ejemplo,
+$$
+\begin{array}{lcccccl}
+    \frac{1}{3} & = & 0.3333\dots, & & \frac{3}{7} & = & 
+0.428571428571\dots,\\[.2cm]
+    \frac{1}{2} & = & 0.50000\dots, & & \sqrt{2} & = & 1.4142135\dots.
+\end{array}
+$$
+\noindent Con esta notaci'on podemos tambi'en distinguir entre los n'umeros racionales y los irracionales. Los n'umeros racionales son aquellos para los cuales la expansi'on decimal es finita o bien infinita pero en alg'un momento se hace peri'odica, como por ejemplo en $\frac{34}{275}=0.123636 \dots$, que se hace peri'odica de periodo 2 a partir del tercer d'igito. En cambio, para los n'umeros irracionales, la expansi'on decimal es infinita, pero no s'olo eso, sino que adem'as nunca se hace peri'odica.
+
+\vei
+
+\noindent Al igual  que en la representaci'on decimal en base 10, podemos representar a los n'umeros enteros en cualquier base. Si $m$ es un n'umero entero positivo, para encontrar su representaci'on en base $b$ lo
+escribimos como suma de potencias de $b$, es decir, $m=a_r b^r+\cdots+a_1 b+a_0$. Los n'umeros
+enteros que aparecen como coeficientes de las potencias de $b$ en la
+representaci'on deben  ser menores que $b$.
+
+\begin{observacion}
+Cuando escribimos un n'umero en una base distinta de 10, ponemos como sub'indice
+la base en la que est'a escrito el n'umero, por ejemplo, $1204_7$ significa que el
+n'umero 1204 es un n'umero en base 7.
+\end{observacion}
+
+
+Veamos el siguiente ejemplo.
+\begin{ejemplo}
+?`En qu'e base el n'umero $221$ es un factor de $1215$?
+\end{ejemplo}
+
+El n'umero 1215 en base $a$ se escribe como $a^3 + 2a^2 + a + 5$ y el
+n'umero 221 en base $a$ es $ 2a^2 + 2a + 1$.  Ahora bien, si dividimos 
+$a^3 + 2a^2 + a + 5$ entre $ 2a^2 + 2a + 1$ obtenemos que
+$$
+   a^3 + 2a^2 + a + 5 = (2a^2 + 2a + 1)\left (\frac{1}{2}a+\frac{1}{2}\right)+
+                        \left(-\frac{1}{2}a + \frac{9}{2}\right).
+$$
+Como $1215_a$ tiene que ser un m'ultiplo de $221_a$, el residuo
+$\left(-\frac{1}{2}a + \frac{9}{2}\right)$ tiene que ser 0 y
+$\left(\frac{1}{2}a + \frac{1}{2}\right )$ tiene que ser un n'umero entero.  Por lo
+tanto, $a=9$.
+
+
+\ve 
+\ve
+
+\input{preliminares1-2}

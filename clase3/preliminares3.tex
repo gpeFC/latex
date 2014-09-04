@@ -1,0 +1,162 @@
+\section{Parte entera y parte fraccionaria}
+\label{parteentera}
+
+Dado cualquier n'umero $x \in \rr$, algunas veces es 'util considerar
+el n'umero entero m'ax $\{ k \in \zz \ | \ k \leq x\}$, es decir, 
+el mayor entero menor o igual que $x$. A este n'umero lo denotamos por 
+$\lfloor x \rfloor$ y se le conoce como 
+{\bf la parte entera de $x$}.\index{N'umero!parte entera}
+
+De la definici'on anterior tenemos las siguientes propiedades.
+
+\begin{propiedades} Sean $x, y \in \rr$, $n \in \nn$ y $m \in \zz$. 
+Entonces se tiene que:
+\begin{description}\label{parteentera}
+\item[$(a)$] $x-1<\lfloor x \rfloor \leq x < \lfloor x \rfloor +1$.
+\item[$(b)$]  $x$ es entero si y s'olo si $\lfloor x \rfloor=x$.
+\item[$(c)$] $\lfloor x +m \rfloor= \lfloor x \rfloor +m$.
+\item[$(d)$] $\left\lfloor \frac{\lfloor x \rfloor}{n}\right\rfloor =
+ \left\lfloor \frac{x}{n}\right\rfloor$.
+\item[$(e)$]  $\lfloor x \rfloor + \lfloor y \rfloor \leq
+\lfloor x +y \rfloor \leq \lfloor x \rfloor + \lfloor y \rfloor +1$.
+\end{description}
+\end{propiedades}
+
+\demostracion{Las primeras tres propiedades son inmediatas.  
+
+$(d)$ Al dividir $\lfloor x\rfloor$ entre $n$ tenemos que $\lfloor x\rfloor= 
+a n +b$, para un n'umero entero $a$ y para un n'umero entero $b$ tal que 
+$0\leq b<n$.
+
+Por un lado, tenemos que 
+ $\left\lfloor \frac{\lfloor x \rfloor}{n}\right\rfloor =
+ \left\lfloor \frac{an+b}{n}\right\rfloor= a+\left\lfloor 
+\frac{b}{n}\right\rfloor= a$. Por otro lado, como $x=\lfloor x\rfloor+c$, 
+con $0 \leq c < 1$, tenemos que
+$\left\lfloor \frac{ x}{n}\right\rfloor =
+ \left\lfloor \frac{an+b+c}{n}\right\rfloor= 
+a+\left\lfloor \frac{b+c}{n}\right\rfloor= a$, ya que $b+c <n-1+1=n$.
+Luego, la igualdad es v'alida. 
+
+$(e)$ Como  $x=\lfloor x\rfloor+a$  y $y=\lfloor y\rfloor+b$ con $0\leq a, b < 1$, entonces
+ $\lfloor x +y \rfloor =\lfloor x\rfloor + \lfloor  y\rfloor+\lfloor a+b \rfloor$ por la propiedad $(c)$. Las desigualdades se siguen de observar que si $0\leq a, b <1$ entonces $0\leq \lfloor a+b\rfloor \leq 1$.
+}
+
+
+\begin{ejemplo}
+Para todo n'umero real $x$ se cumple que 
+$$\lfloor x \rfloor + \left\lfloor x + \frac{1}{2}\right\rfloor
+- \lfloor 2x \rfloor=0.$$
+\label{exismasunmediomenosdosexis}
+\end{ejemplo}
+
+Si se hace $n=\lfloor x \rfloor$, $x$ se puede expresar de la forma 
+$x=n+a$ con $0 \leq a < 1$, luego se tiene que
+\begin{eqnarray*}  
+\lfloor x \rfloor + \left\lfloor x + \frac{1}{2}\right\rfloor
+- \lfloor 2x \rfloor & = & n + \left\lfloor n+a + \frac{1}{2}
+\right\rfloor - \lfloor 2(n+a) \rfloor\\
+& = & n + n + 
+\left\lfloor a + \frac{1}{2}\right\rfloor -2n - \left\lfloor 2a \right\rfloor\\
+& = & \left\lfloor a + \frac{1}{2}\right\rfloor - \left\lfloor 2a \right\rfloor,
+\end{eqnarray*}
+donde la segunda igualdad se sigue por la propiedad $(c)$. Ahora, si 
+$0 \leq a < \frac{1}{2}$, entonces $\left\lfloor a + \frac{1}{2}\right\rfloor=
+\lfloor 2a \rfloor=0$, mientras que en el caso $\frac{1}{2} \leq a < 1$, se 
+tiene que $\left\lfloor a + \frac{1}{2}\right\rfloor=
+\lfloor 2a \rfloor=1$.
+
+
+\begin{ejemplo}
+Si $n$ y $m$ son enteros positivos sin factores
+comunes, entonces
+$$
+\left\lfloor \dfrac{n}{m}\right\rfloor +\left \lfloor \dfrac{2n}{m}\right 
+\rfloor + \left\lfloor\dfrac{3n}{m}\right \rfloor +\cdots +
+\left\lfloor\dfrac{(m-1)n}{m}\right \rfloor =\dfrac{(m-1)(n-1)}{2}.
+$$
+\label{sumadepartesenteras}
+\end{ejemplo}
+
+Consideramos en el plano cartesiano la recta que pasa por el origen y el punto
+$(m,n)$. Como $m$ y $n$ son primos relativos, sobre el segmento de recta que 
+une los puntos $(0,0)$ y $(m,n)$ no hay otro punto de coordenadas enteras. 
+
+\centerline{
+	\psset{unit=.7cm}
+	\begin{pspicture}(0,-1)(6,6.5)
+	\psaxes[labels=none]{->}(8.5,5.5)
+	\psline(1,1)(7,1)(7,4)(1,4)(1,1)
+	\psline(0,0)(8,5)
+	\psdot(8,5)
+         \pscircle[fillstyle=solid,fillcolor=black](8,0){.1}
+         \pscircle[fillstyle=solid,fillcolor=black](0,5){.1}
+	\rput{0}(1,-.5){$1$}
+	\rput{0}(-.5,1){$1$}
+	\rput{0}(2,-.5){$2$}
+         \rput{0}(-.5,2){$\vdots$}
+	\rput{0}(3.5,-.5){$\cdots$}
+	\rput{0}(7,-.5){$m-1$}
+	\rput{0}(-1,4){$n-1$}
+        \rput{0}(8.6,.5){$A=(m,0)$}
+	\rput{0}(8,5.5){$B=(m,n)$}
+	\rput{0}(-1.7,5){$C=(0,n)$}
+	\rput{0}(-.3,-.3){$O$}
+        \end{pspicture}
+}
+
+La ecuaci'on de la recta es $y=\frac{n}{m} x$ y pasa por los puntos 
+$(j, \frac{n}{m} j)$, con $j=1,\ldots, (m-1)$, y adem'as $\frac{n}{m} j$ 
+no es entero. 
+El n'umero $\left \lfloor \frac{n}{m} j\right \rfloor$ es igual al n'umero de 
+puntos de coordenadas enteras que est'an sobre la recta $x=j$ y, entre las 
+rectas $y=\frac{n}{m} x$ y $y=1$ inclusive. La suma es igual al n'umero 
+de puntos de coordenadas enteras  en el interior del tri'angulo $OAB$, 
+por simetr'ia es 
+igual a la mitad de los puntos de coordenadas enteras dentro del rect'angulo 
+$OABC$. Como 
+la cantidad de  puntos de coordenadas enteras dentro del rect'angulo 
+es $(n-1)(m-1)$, tenemos que
+$$
+\left\lfloor \dfrac{n}{m}\right\rfloor +\left \lfloor \dfrac{2n}{m}\right 
+\rfloor + \left\lfloor\dfrac{3n}{m}\right \rfloor +\cdots +
+\left\lfloor\dfrac{(m-1)n}{m}\right \rfloor =\dfrac{(m-1)(n-1)}{2}.
+$$
+
+\vei
+
+\begin{observacion}
+Como el lado derecho de la 'ultima igualdad es sim'etrico en $m$ y $n$, 
+entonces
+$$\left\lfloor \dfrac{n}{m}\right\rfloor +\left \lfloor \dfrac{2n}{m}\right 
+\rfloor + \cdots +
+\left\lfloor\dfrac{(m-1)n}{m}\right \rfloor =
+\left\lfloor \dfrac{m}{n}\right\rfloor +\left \lfloor \dfrac{2m}{n}\right 
+\rfloor + \cdots +
+\left\lfloor\dfrac{(n-1)m}{n}\right \rfloor.$$
+\end{observacion}
+
+\ve
+
+Para un n'umero real $x$, consideremos tambi'en el n'umero
+$\{x\}=x - \lfloor x \rfloor$, al cual  llamamos la 
+{\bf parte fraccionaria de $x$}\index{N'umero!parte fraccionaria},
+y  cumple las siguientes propiedades. 
+
+\begin{propiedades} Sean $x, y \in \rr$ y $n \in \zz$. Entonces se tiene que:
+\begin{description}
+\item[$(a)$] $0 \leq \{x\} <1$.
+
+\item[$(b)$] $x =  \lfloor x \rfloor  + \{x\}$.
+
+\item[$(c)$] $\{x+ y\} \leq \{x\} + \{y\} \leq  \{x +y\} +1$.
+
+\item[$(d)$] $\{ x +n \}= \{x\}$.
+
+\end{description}
+\end{propiedades}
+
+
+\ve
+
+\input{preliminares3-1.tex}

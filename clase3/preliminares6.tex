@@ -1,0 +1,222 @@
+
+\section{Desigualdades}
+\label{sec-desigualdades}
+\index{Desigualdades}
+\noindent Iniciamos esta secci'on con una de las  desigualdades m'as importantes.
+Para cualquier n'umero real $x$, tenemos que
+\begin{equation}
+\label{ecuac1.2.1}
+                  x^2  \geq  0.
+\end{equation}
+Esto se sigue de la igualdad  $x^2=|x|^2 \geq 0$.
+
+\noindent A partir de este resultado podemos deducir  que la suma de $n$  
+n'umeros cuadrados es no negativa,
+\begin{equation}
+\label{ecuac1.2.2}
+                      x_1^2+x_2^2+\cdots+ x_n^2  \geq  0
+\end{equation}
+y ser'a cero  si y solamente si todos los $x_i$ son cero.
+
+\noindent Si en la ecuaci'on (\ref{ecuac1.2.1}) sustituimos $x=a-b$, donde
+$a$ y $b$ son n'umeros reales no negativos, tenemos que
+$$
+     (a-b)^2\geq 0.
+$$
+Desarrollando el binomio, la desigualdad anterior toma la forma,
+\begin{equation}
+        a^2+b^2 \geq 2ab.
+\label{a2masb2mayoroiguala2ab}
+\end{equation}
+Como 
+$$
+   a^2+b^2\geq 2ab \;\;\text{si y s'olo si}\;\; 2a^2+2b^2\geq a^2+2ab+b^2=
+	 (a+b)^2,
+$$ 
+tenemos tambi'en la siguiente desigualdad 
+\begin{equation}
+\label{ecuac1.2.3}\sqrt{ \frac{a^2+b^2}{2}}  \geq  \frac{(a+b)}{2}.
+\end{equation}				
+En caso de que $a$ y $b$ sean positivos, la  desigualdad (\ref{a2masb2mayoroiguala2ab}) garantiza que 
+\begin{equation}
+\label{numeroyreciproco}
+        \frac{a}{b}+\frac{b}{a}\geq 2.
+\end{equation}
+Si en la desigualdad anterior tomamos $b=1$, entonces tenemos que  
+$a+\frac{1}{a}\geq 2$, es decir, la suma de $a>0$ y su rec'iproco es 
+mayor o igual que 2, y es 2 si y s'olo si  $a=1$.
+
+\vei
+
+\noindent Remplazando $a$, $b$ por $\sqrt{a}$, $\sqrt{b}$ en (\ref{a2masb2mayoroiguala2ab}) obtenemos
+\begin{equation}
+\label{ecuac1.2.5}
+   a+b\geq 2\sqrt{ab}\;\; \text{si y s'olo si}\;\;\frac{a+b}{2}\geq \sqrt{ab}.
+\end{equation}
+Multiplicando la 'ultima desigualdad por $\sqrt{ab}$ y reacomodando,  tenemos
+\begin{equation}
+\label{ecuac1.2.4e}
+ \sqrt{ab} \geq \frac{2ab}{a+b}.
+\end{equation}
+Juntando  las desigualdades (\ref{ecuac1.2.3}), (\ref{ecuac1.2.5})   y (\ref{ecuac1.2.4e}),  hemos demostrado que
+\begin{equation}
+    \frac{2ab}{a+b}\leq \sqrt{ab}\leq \frac{a+b}{2}\leq \sqrt{\frac{a^2+b^2}{2}}.
+\label{todaslasmedias}
+\end{equation}
+La primera expresi'on  se conoce como la {\bf media arm'onica}\index{Media!arm'onica} ($MH$), la segunda es la
+{\bf media geom'etrica} \index{Media!geom'etrica} ($MG$), la tercera es la
+{\bf media aritm'etica} \index{Media!aritm'etica} ($MA$) y la 'ultima es la
+{\bf media cuadr'atica}\index{Media!cuadr'atica} ($MQ$). 
+
+Estas desigualdades tambi'en  se pueden demostrar
+geom'etricamente como sigue. Consideremos un semicircunferencia con centro $O$, radio $\frac{a+b}{2}$ y los tri'angulos
+rect'an\-gulos $ABC$, $DBA$
+y $DAC$, como se muestra en la figura
+
+\centerline{
+	\psset{unit=1cm}
+	\begin{pspicture}(0,0)(6,4.5)
+	\psset{linewidth=0.5pt}
+	\psline(0,1)(6,1)
+	\psline(0,.6)(.1,.4)(1.3,.4)(1.5,.6)
+	\psline(1.5,.6)(1.6,.4)(5.9,.4)(6,.6)
+	\psarc[linewidth=.5pt](3,1){3}{0}{180}
+	\psline(1.5,1)(1.5,3.61)
+	\psline(1.5,3.61)(3,1)
+	\psline(0,1)(1.5,3.61)(6,1)
+	\psline(1.5,1)(2.68,1.58)
+          \psline(1.3,1)(1.3,1.2)(1.5,1.2)
+	\psline(2.4,1.44)(2.3,1.63)(2.57,1.77)
+	\rput{0}(.75,.1){$ a$}
+	\rput{0}(4,.1){$b$}
+	\rput{0}(2,1.4){$e$}
+	\rput{0}(1.3,2){$h$}
+	\rput{0}(2.5,2.5){$y$}
+	\rput{0}(3.2,1.3){$z$}
+	\rput{0}(1.5,3.9){$A$}
+	\rput{0}(-.3,1){$ B$}
+	\rput{0}(6.3,1){$ C$}
+	\rput{0}(1.5,.8){$ D$}
+	\rput{0}(2.9,1.7){$E$}
+	\rput{0}(3,.8){$ O$}
+	\end{pspicture}
+}
+\noindent Estos tri'angulos son semejantes por lo que tenemos que
+\begin{eqnarray*}
+	     \frac{AD}{DB} & = &\frac{DC}{DA}\\
+             \frac{h}{a} & = &\frac{b}{h}\\
+                    h^2  & = & ab,
+\end{eqnarray*}
+es decir, que la altura com'un de los tri'angulos es $h=\sqrt{ab}$, que claramente
+es menor que el radio de la semicircunferencia.  Luego,
+$\sqrt{ab}\leq \frac{a+b}{2}$.
+
+\noindent Para demostrar la primera desigualdad de (\ref{todaslasmedias}), observemos que los tri'angulos
+$DAE$ y $OAD$ son semejantes, entonces
+\begin{eqnarray*}
+             \frac{AD}{AE} & = &\frac{AO}{AD}\\
+                    h^2  & = & y(y+z)\\
+             \frac{2ab}{a+b} & = & y,
+\end{eqnarray*}
+es decir, $y$ representa la media arm'onica. Claramente tenemos que $y\leq h$,
+luego $\frac{2ab}{a+b}\leq \sqrt{ab}$.
+
+\noindent Para demostrar geom'etricamente, la 'ultima desigualdad de (\ref{todaslasmedias}), conside\-remos
+la siguiente figura
+
+\centerline{\psset{unit=.9cm}
+	\begin{pspicture}(0,0)(5,4.7)
+	\psset{linewidth=0.5pt}
+	\psline(0,1)(6,1)
+	\psarc[linewidth=.5pt](3,1){3}{0}{180}
+	\psline(1.5,1)(1.5,3.61)
+	\psline(1.5,1)(3,4)
+	\psline(3,1)(3,4)
+	\rput{0}(1.5,3.9){$ A$}
+	\rput{0}(3,4.3){$ L$}
+	\rput{0}(1.5,.7){$ D$}
+	\rput{0}(3,.7){$ O$}
+	\end{pspicture}
+}
+
+\noindent Tenemos que $OD=\frac{a+b}{2}-a=\frac{b-a}{2}$ y utilizando el teorema
+de Pit'agoras tenemos que
+$$     
+ DL^2  =  OD^2 + OL^2=\Big(\frac{b-a}{2}\Big )^2 +\Big(\frac{a+b}{2}\Big )^2 =  \frac{a^2+b^2}{2},
+$$			
+es decir, $DL =\sqrt{\frac{a^2+b^2}{2}}$ que claramente es mayor que
+$\frac{a+b}{2}$.
+
+\ve
+
+\noindent Utilizando el ejemplo \ref{ejemplocubicas} podemos dar una
+demostraci'on de la desigualdad entre la media geom'etrica y la media aritm'etica
+ para tres n'umeros reales no negativos. En efecto, por la identidad
+$$
+a^3+b^3+c^3-3abc=\frac{1}{2}(a+b+c)\left [ (a-b)^2+(b-c)^2 +(c-a)^2\right ],	
+$$
+es claro que si $a$, $b$ y $c$ son no negativos, entonces
+$a^3+b^3+c^3-3abc\geq 0$, es decir, $a^3+b^3+c^3 \geq 3abc$.
+Adem'as, tenemos la igualdad si $a+b+c=0$ o $(a-b)^2+(b-c)^2 +(c-a)^2=0$, esto es solamente cuando $a=b=c$.
+ Ahora si $x$, $y$ y $z$ son n'umeros no negativos, definiendo $a=\sqrt[3]{x}$,
+$b=\sqrt[3]{y}$ y $c=\sqrt[3]{z}$, tenemos que
+\begin{equation}
+    \frac{x+y+z}{3}\geq \sqrt[3]{xyz},
+\label{mediaaritgeomtresvariables}
+\end{equation}
+con igualdad si y s'olo si $x=y=z$.
+
+
+\begin{ejemplo}
+Para todo n'umero real $x$, sucede que
+$\frac{x^2+2}{\sqrt{x^2+1}}\geq 2$.
+\end{ejemplo}
+
+En efecto,
+$$
+    \frac{x^2+2}{\sqrt{x^2+1}}  =  \frac{x^2+1}{\sqrt{x^2+1}}+\frac{1}{\sqrt{x^2+1}}
+                                =  \sqrt{x^2+1}+\frac{1}{\sqrt{x^2+1}} \geq 2.
+$$
+La desigualdad se sigue de aplicar la desigualdad (\ref{numeroyreciproco}).
+
+\begin{ejemplo}
+Si $a$, $b$, $c$ son n'umeros no negativos, entonces
+$$
+          (a+b)(b+c)(a+c)\geq 8abc.
+$$
+\end{ejemplo}
+\noindent Como hemos visto, $\frac{(a+b)}{2}\geq \sqrt{ab}$, $\frac{(b+c)}{2}\geq \sqrt{bc}$\; y $\frac{(a+c)}{2}\geq \sqrt{ac}$, de donde
+$$
+    \left (\frac{a+b}{2}\right )\left (\frac{b+c}{2}\right )\left (\frac{a+c}{2}\right ) \geq\sqrt{a^2b^2c^2}=abc.
+$$
+
+\begin{ejemplo}
+\label{ejemploreacomodo}
+Si $x_1>x_2>x_3$ y $y_1>y_2>y_3$, ?`cu'al de las siguientes sumas es mayor?
+\begin{eqnarray*}
+     S & = & x_1y_1+x_2y_2+x_3y_3\\
+		 S^\prime & = & x_1y_2+x_2y_1+x_3y_3.
+\end{eqnarray*}		
+\end{ejemplo}
+Consideremos la diferencia,
+\begin{eqnarray*}
+     S^\prime- S & = & x_1y_2-x_1y_1+x_2y_1-x_2y_2\\
+               	 & = & x_1(y_2-y_1)+x_2(y_1-y_2)\\
+		  & = & -x_1(y_1-y_2)+x_2(y_1-y_2)\\
+		 & = & (x_2-x_1)(y_1-y_2) < 0,
+\end{eqnarray*}		
+por lo tanto, $S^\prime < S$.
+
+\noindent M'as generalmente, para cualquier permutaci'on $\{y^\prime_1,y^\prime_2,y^\prime_3\}$ de
+$\{y_1,y_2,y_3\}$ tenemos que,
+\begin{equation}
+         S\geq x_1y^\prime_1+x_2y^\prime_2+x_3y^\prime_3,
+\label{desigualdadreacomodo}
+\end{equation} que se conoce como la 
+{\bf desigualdad del reacomodo}\footnote{Para una versi'on general de la 
+desigualdad del reacomodo, vea el ejemplo \ref{desigualdaddelreacomodo}.}. 
+\index{Desigualdad!del reacomodo}
+
+\vei		
+
+\input{preliminares6-1.tex}

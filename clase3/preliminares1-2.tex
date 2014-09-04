@@ -1,0 +1,95 @@
+
+
+%%%%%%%%%%11
+
+\ejercpreliminares{Escriba en la forma $\frac{m}{n}$, con $n$ y $m$ 
+n'umeros enteros positivos, a los siguiente n'umeros reales:
+
+$(i)$  $0.11111\dots$.  
+
+$(ii)$ $1.14141414\dots$.
+}
+
+\solcpreliminares{Para resolver $(i)$, defina $x=0.111\dots$, 
+entonces $10x=1.11\dots$. Restando la primera ecuaci'on de la 
+segunda se tiene que $9x=1$, luego,  $x=\frac{1}{9}$.
+
+\noindent $(ii)$ Sea $x=1.141414\ldots$, entonces 
+$100x=114.141414\ldots$. Restando la pri\-mera ecuaci'on de la 
+segunda se tiene que $99x=113$, de donde $x=\frac{113}{99}$. }
+
+\ejercpreliminares{$(i)$\; Muestre que $121_b$ es un cuadrado 
+perfecto en cualquier base $b\geq 2$.
+
+$(ii)$\; Determine el menor valor de $b$ para el cual  $232_b$ 
+es un cuadrado perfecto.
+}
+
+\solcpreliminares{$(i)$\; Primero observe que 
+$121_b=(1\times b^2)+ (2\times b) +1 =(b+1)^2$ entonces 
+$121_b$ es un cuadrado perfecto en cualquier base $b\geq 2$.
+
+$(ii)$\; Como $232_b=2b^2+3b+2$ debe ser cuadrado y como 3 es 
+uno de sus d'igitos, $b\geq 4$.
+
+Para $b=4$, $232_4=46$, para $b=5$, $232_5=67$, para $b=6$, 
+$232_6=92$ y para $b=7$, $232_7=121$. Luego, $b=7$ es el menor 
+entero positivo tal que $232_b$ es un cuadrado perfecto. 
+}
+
+%%%%%% 12
+%\ejercpreliminares{Sea $b \geq 2$ un entero positivo.
+%(a) Muestre que para que un entero $N$, escrito en base $b$, sea igual a la suma del cuadrado %de sus d'igitos, es necesario que  $N = 1$ o que 
+%$N$ tenga solamente dos d'igitos.
+%(b) Give a complete list of all integers not exceeding 50 that, relative to
+%some base $b$, are equal to the sum of the squares of their digits.
+%(c) Show that for any base $b$ the number of two-digit integers that are
+%equal to the sum of the squares of their digits is even.
+%(d) Show that for any odd base $b$ there is an integer other than 1 that is
+%equal to the sum of the squares of its digits.
+%}
+
+%%%%%%%% 13
+\ejercpreliminares{(IMO, 1970) Sean $a$, $b$ y $n$ n'umeros enteros mayores 
+que 1. Sean $A_{n-1}$ y $A_n$ dos n'umeros escritos en el sistema num'erico en 
+base  $a$ y, $B_{n-1}$ y $B_n$ dos n'umeros escritos en el sistema n'umerico 
+en base  $b$. Estos n'umeros 
+est'an relacionados de la siguiente forma,
+\begin{eqnarray*}
+        A_n = x_nx_{n-1} \dots x_0, & & A_{n-1} = x_{n-1}x_{n-2}\dots x_0,\\
+        B_n = x_nx_{n-1} \dots x_0, & & B_{n-1} = x_{n-1}x_{n-2}\dots x_0,
+\end{eqnarray*}
+con 
+$x_n\neq 0$ y $x_{n-1}\neq 0$.  Muestre que  $a > b$ si y s'olo si
+$$
+                  \frac{A_{n-1}}{A_{n}} <\frac{B_{n-1}}{B_{n}}.
+$$
+}
+
+\solcpreliminares{Suponga que $a>b$. Entonces para todos los 
+enteros $0\leq k\leq n$, $x_nx_ka^nb^k\geq x_nx_kb^na^k$, con 
+igualdad solamente cuando $k=n$ o $x_k=0$. En particular, se 
+tiene una desigualdad estricta para $k=n-1$. En resumen, esto 
+se convierte en
+$$
+              x_n a^n\sum_{k=0}^n x_kb^k > x_nb^n \sum_{k=0}^n x_k a^k
+$$
+o 
+$$
+             \frac{ x_n a^n}{A_n}> \frac{x_nb^n}{B_n}.
+$$
+Esto implica que
+$$
+             \frac{ A_{n-1}}{A_n}= 1-\frac{ x_n a^n}{A_n} < 
+1-\frac{ x_n b^n}{B_n} =\frac{B_{n-1}}{B_n}.
+$$ 
+Por otro lado, si $a=b$, entonces evidentemente 
+$\frac{ A_{n-1}}{A_n}= \frac{ B_{n-1}}{B_n}$ y si 
+$a<b$, por lo que se demostr'o antes, se tiene que, 
+$ \frac{ A_{n-1}}{A_n}> \frac{ B_{n-1}}{B_n}$. Por lo 
+tanto, $\frac{A_{n-1}}{A_{n}} <\frac{B_{n-1}}{B_{n}}$ si y 
+s'olo si $a>b$.
+}
+
+
+

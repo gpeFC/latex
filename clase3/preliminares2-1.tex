@@ -1,0 +1,172 @@
+%%% 13
+\ejercpreliminares{Si $a$ y $b$ son n'umeros reales 
+cualesquiera, demuestre que
+$$
+             ||a|-|b||\leq |a-b|.
+$$
+}
+
+\solcpreliminares{Observe que $|a|=|a-b+b|\leq |a-b|+|b|$, 
+despejando se tiene que $|a|-|b|\leq |a-b|.$  An'alogamente, 
+siguiendo los mismos pasos, se tiene que $|b| -|a|\leq |b-a|$. 
+De estas dos desigualdades se sigue que $||a|-|b||\leq |a-b|$.
+}
+
+
+
+%%% 14
+\ejercpreliminares{En cada caso encuentre los n'umeros reales 
+$x$ que satisfacen:
+
+$(i)$\;$|x-1|- |x+1|=0$.
+
+$(ii)$\; $|x-1||x+1|=1$.
+
+$(iii)$\; $|x-1|+ |x+1|=2$.
+}
+
+\solcpreliminares{$(i)$\;  $|x-1|- |x+1|=0$ es equivalente a 
+$|x-1|=|x+1|$. Elevando al cuadrado y resolviendo la ecuaci'on 
+$(x-1)^2 = (x+1)^2$ tenemos que $4x =0$,
+luego, la 'unica soluci'on es $x=0$.
+
+$(ii)$\; $|x-1||x+1|=1$  es equivalente a $|x^2-1|=1$, de donde
+%$$
+%\begin{array}{lcccl}
+%          x^2 -1 =1 & &\text{o} & & -(x^2 -1) =1\\
+%         x^2  =2 & &\text{o} & & x^2  =0\\
+%         x = \pm\sqrt{2} & &\text{o} & & x  =0,
+%\end{array}
+%$$
+las soluciones son $x = \pm\sqrt{2}$  y $ x  =0$.
+
+$(iii)$\;  Si $x>1$ se cumple que  $|x+1|=x+1 >2$, luego no hay soluci'on.
+
+Si $x<-1$ se cumple que  $|x-1|=-x+1 >2$ y tampoco hay soluci'on.
+
+Si $-1\leq x \leq 1$,  entonces $x-1 \leq 0\leq x+1$,   luego 
+$$
+      |x-1|+|x+1 |=(1-x)+(x+1)=2.
+$$
+Por lo que los 'unicos valores de  $x$ que cumplen  la igualdad son 
+ $-1\leq x\leq 1$.
+}
+
+%%% 15
+\ejercpreliminares{Encuentre las ternas $(x,y,z)$  de n'umeros 
+reales que satisfacen 
+\begin{eqnarray*}
+              |x+y| &\geq & 1\\
+             2xy -z^2 & \geq & 1\\
+            z-|x+y|  & \geq & -1.
+\end{eqnarray*}
+}
+
+\solcpreliminares{De la primera y  tercera desigualdades 
+se tiene que \linebreak $z \geq |x+y| -1\geq 0$. Por lo que, $z^2\geq 
+(|x+y|-1)^2$. Ahora,   $2xy \geq z^2+1\geq (|x+y|-1)^2 + 1\geq 0$, 
+entonces
+$$
+  2xy \geq  x^2+2xy+y^2-2|x+y|+2 \geq  |x|^2+2xy+|y|^2 - 2|x|- 2 |y| +2,
+$$
+cancelando $0\geq  |x|^2+|y|^2 - 2|x|- 2 |y|+2 = (|x|-1)^2 +(|y|-1)^2.$
+Por lo que $|x|=1$ y $|y|=1$.
+Luego,  $x$ y $y$ tienen que ser   $-1$ o 1.  Pero como $xy\geq 0$,  
+los dos tienen que tener el mismo signo. Para  $x=y=1$ o $x=y=-1$ se 
+tiene, sustituyendo en las ecuaciones originales,   
+que $2-z^2\geq 1$ y $z-2\geq -1$. Luego, $z^2\leq 1$ y $z\geq 1$. El 
+'unico valor de $z$ que satisface las dos desigualdades es $z=1$. 
+Por lo tanto, hay dos soluciones al problema $x=y=z=1$ y $x=y=-1$, $z=1$. 
+}
+
+
+%%%%%16
+\ejercpreliminares{(OMM, 2004) ?`Cu\'al es la mayor cantidad de 
+n'umeros enteros positivos que se pueden encontrar de manera que 
+cualesquiera dos de ellos, $a$ y $b$ (con $a\neq b$), cumplan que:
+$$|a-b|\geq \frac{ab}{100}?$$
+}
+
+\solcpreliminares{Suponga que
+$a_{1}<a_{2}< \dots<a_{n}$ es una colecci\'{o}n con la mayor cantidad de
+n'umeros enteros con la propiedad.  Es claro que $a_{i}\geq i$, para 
+toda $i=1, \ldots, n$.
+
+\noindent Si $a$ y $b$ son dos n'umeros enteros de la colecci\'{o}n 
+con $a>b$, como $%
+\left\vert a-b\right\vert =a-b\geq \frac{ab}{100}$, se tiene que 
+$a \left(1-\frac{b}{100} \right) \geq b$, por lo que si $100-b>0$, 
+entonces $a\geq \frac{100b}{100-b}$.
+
+\noindent Note que no existen dos n'umeros enteros $a$ y $b$ en la 
+colecci\'{o}n
+mayores que $100$, en efecto si $a>b>100$, entonces $a-b=\left\vert
+a-b\right\vert \geq \frac{ab}{100}>a$, lo cual es falso.
+
+\noindent Tambi\'{e}n se tiene que para n'umeros enteros $a$ y $b$ 
+menores que $100$,
+se cumple que $\frac{100a}{100-a}\geq \frac{100b}{100-b}$ si y s'olo si 
+$100a-ab\geq 100b-ab$ si y s'olo si $a\geq b$.
+
+\vei 
+
+\noindent Es claro que $\left\{ 1,2,3,4,5,6,7,8,9,10\right\} $ es una 
+colecci\'{o}n con la propiedad.
+
+\noindent Ahora, $a_{11}\geq \frac{100a_{10}}{100-a_{10}}\geq \frac{100\cdot
+10}{100-10}=\frac{100}{9}>11$, lo que implica que $a_{11}\geq 12$.
+
+\ve
+
+$a_{12}\geq \frac{100a_{11}}{100-a_{11}}\geq \frac{100\cdot 12}{100-12}=%
+\frac{1200}{88}>13$, de donde $a_{12}\geq 14$.
+
+\ve
+
+$a_{13}\geq \frac{100a_{12}}{100-a_{12}}\geq \frac{100\cdot 14}{100-14}=%
+\frac{1400}{86}>16$, de donde $a_{13}\geq 17$.
+
+\ve
+
+$a_{14}\geq \frac{100a_{13}}{100-a_{13}}\geq \frac{100\cdot 17}{100-17}=%
+\frac{1700}{83}>20$, de donde $a_{14}\geq 21$.
+
+\ve
+
+$a_{15}\geq \frac{100a_{14}}{100-a_{14}}\geq \frac{100\cdot 21}{100-21}=%
+\frac{2100}{79}>26$, de donde $a_{15}\geq 27$.
+
+\ve
+
+$a_{16}\geq \frac{100a_{15}}{100-a_{15}}\geq \frac{100\cdot 27}{100-27}=%
+\frac{2700}{73}>36$, de donde  $a_{16}\geq 37$.
+
+\ve
+
+$a_{17}\geq \frac{100a_{16}}{100-a_{16}}\geq \frac{100\cdot 37}{100-37}=%
+\frac{3700}{63}>58$, de donde  $a_{17}\geq 59$.
+
+\ve
+
+$a_{18}\geq \frac{100a_{17}}{100-a_{17}}\geq \frac{100\cdot 59}{100-59}=%
+\frac{5900}{41}>143$, de donde  $a_{18}\geq 144$.
+
+\ve
+
+\noindent Adem'as, como ya se ha observado que no hay dos  
+n'umeros enteros de la colecci\'{o}n mayores que $100$, 
+la mayor cantidad es $18$.
+La colecci\'{o}n de $18$ n'umeros enteros siguiente 
+$\left\{ 1,2,3,4,5,6,7,8,9,10,12,14,17,21,27,37,59,144\right\}$ 
+cumple la condici\'{o}n.
+}
+
+
+
+
+
+
+
+
+
+

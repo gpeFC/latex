@@ -1,0 +1,100 @@
+%%%%%% 45
+\ejercpreliminares{Para todos los n'umeros reales $x$, $y$ y $z$, 
+se tienen las siguientes identidades:
+
+\noindent $(i)$\;
+$(x+y+z)^{3}-(y+z-x)^{3}-(z+x-y)^{3}-(x+y-z)^{3}=24xyz$.\\
+\noindent $(ii)$\;
+$(x-y)^{3}+(y-z)^{3}+(z-x)^{3}=3(x-y)(y-z)(z-x)$.\\
+$(iii)$ \, $(x-y)(y+z)(z+x)+(y-z)(z+x)  (x+y)+(z-x)(x+y)(y+z)$\\
+\phantom{.}\hspace{1.8in}        $ = - (x-y)(y-z)(z-x)$.
+}
+
+\solcpreliminares{Para demostrar todos los incisos de este ejercicio, 
+'unicamente realice las operaciones y simplifique.
+}
+
+%%%%%% 46
+\ejercpreliminares{Para todos los n'umeros reales $x$, $y$ y $z$, muestre lo 
+siguiente:
+%\noindent $(i)$\;
+%$x^{3}+y^{3}+z^{3}=3xyz$  si y s\'{o}lo si $x+y+z=0$ o bien $x=y=z$.
+
+\noindent $(i)$\; Si $f(x,y,z)=x^{3}+y^{3}+z^{3}-3xyz$, entonces
+$$
+        f(x,y,z)=\frac{1}{2} f(x+y, y+z, z+x)=\frac{1}{4} f(-x+y+z,x-y+z,x+y-z).
+$$
+\noindent $(ii)$\; Si $f(x,y,z)=x^{3}+y^{3}+z^{3} - 3xyz$, entonces
+$f(x,y,z)\geq 0$ si y s\'{o}lo si $x+y+z\geq 0$ y  $f(x,y,z)\leq 0$
+si y s\'{o}lo si $x+y+z\leq 0$.
+}
+
+\solcpreliminares{Para demostrar todos los incisos de este ejercicio utilice 
+la identidad  (\ref{abccubicas}).
+}
+
+%%%%%% 46
+\ejercpreliminares{Muestre que para n'umeros reales $x$, $y$, se tienen las 
+siguientes identidades:
+
+\noindent $(i)$\;
+$(x+y)^{5}-(x^{5}+y^{5})=5xy(x+y)(x^{2}+xy+y^{2})$.
+
+\noindent $(ii)$\; $(x+y)^{7}-(x^{7}+y^{7})=7xy(x+y)(x^{2}+xy+y^{2})^{2}$.
+}
+
+\solcpreliminares{Desarrolle ambos lados de las identidades.
+}
+
+%%%%%% 47
+
+\ejercpreliminares{Sean $x$, $y$ y $z$ n\'umeros reales tales que $x\neq y$ y
+$$x^2(y+z)=y^2(x+z)=2.$$
+Determine el valor de $z^2(x+y)$.
+}
+
+\solcpreliminares{Se tiene que
+\begin{eqnarray*}
+0 & = & x^2(y+z)-y^2(x+z)= xy(x-y)+(x^2-y^2)z\\
+  & = & (x-y)(xy+xz+yz).
+\end{eqnarray*}
+Como $x\neq y$, se tiene que $xy+xz+yz=0$. Multiplicando por $x-z$ se obtiene
+\begin{eqnarray*}
+0 &=& (x-z)(xy+xz+yz)= xz(x-z)+(x^2-z^2)y\\
+&=& x^2(y+z)-z^2(x+y),
+\end{eqnarray*}
+de donde $z^2(x+y)=x^2(y+z)=2$.
+}
+
+
+%%%%%%%%%%1.48
+\ejercpreliminares{Encuentre las soluciones reales $x$, $y$, $z$ y $w$
+del sistema de ecuaciones
+\begin{eqnarray*}
+x  + y +z  & = & w \\
+\frac{1}{x}+ \frac{1}{y}+\frac{1}{z} & = &\frac{1}{w}.
+\end{eqnarray*}
+}
+
+\solcpreliminares{Vea que $(x+y+z)(xy+yz+zx)=xyz$ y por la ecuaci'on (\ref{productodetres}) tenemos que
+$(x+y)(y+z)(z+x)=0.$ Luego, las soluciones $(x,y,z,w)$ son de la forma: $(x,-x,z,z)$,
+ $(x,y,-y,x)$ y $(x,y,-x,y)$, con $x$, $y$ y $z$ n'umeros reales diferentes de cero.
+}
+
+%%%%%%%%%% 49
+
+\ejercpreliminares{Sean $x$, $y$ y $z$ n\'{u}meros reales diferentes
+de cero que cumplen las condiciones $x+y+z\neq 0$ y 
+$\frac{1}{x}+\frac{1}{y}+\frac{1}{z}=\frac{1}{x+y+z}$. Muestre que, para 
+cualquier n'umero entero impar $n$, se cumple que
+\begin{equation*}
+\dfrac{1}{x^{n}}+\dfrac{1}{y^{n}}+\dfrac{1}{z^{n}}=\dfrac{1}{x^{n}+y^{n}+z^{n}}.
+\end{equation*}
+}
+
+\solcpreliminares{Por la ecuaci'on 
+(\ref{productodetres}), se tiene que la condici'on es equivalente a  $(x+y)(y+z)(z+x)=0$.
+Luego, un factor es cero, digamos $x+y=0$. Entonces, como $n$ es impar,
+$x^{n}+y^{n}=0$, lo mismo que $\frac{1}{x^{n}}+\frac{1}{y^{n}}=0$.
+}
+

@@ -1,0 +1,557 @@
+%FORMATO BASE PARA UNA letter
+%<alt>126 = ~
+%abrir comillas = <alt>96 <alt>96
+%\usepackage[T1]{fontenc}
+
+\documentclass[spanish,11pt]{book}
+\usepackage[activeacute]{babel}
+\usepackage{makeidx}
+%\usepackage{showidx}
+\usepackage{amssymb}
+\usepackage{pst-all}
+\usepackage{ifthen}
+\usepackage{amsmath}
+%\usepackage{psfig}
+\usepackage{pstricks}
+\usepackage{epic}
+\usepackage{eepic}
+\usepackage{tabularx}
+\usepackage{hhline}
+\usepackage{calc}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
+\usepackage{pstcol,pst-plot}
+\usepackage{pst-eucl}
+\usepackage{pst-poly}
+\usepackage{relsize}
+\usepackage{times}
+\usepackage{graphicx,color}
+\usepackage{url}
+\usepackage{pst-xkey}
+\usepackage{stmaryrd}
+\usepackage{psfrag}
+
+\spanishdecimal{.}
+
+\renewcommand{\familydefault}{cmss}
+
+%%	CAMBIO A MEXICANO
+
+\addto\captionsspanish{\renewcommand{\contentsname}{Contenido}}
+\addto\captionsspanish{\renewcommand{\listfigurename}{Lista de Figuras}}
+\addto\captionsspanish{\renewcommand{\listtablename}{Lista de Tablas}}
+\addto\captionsspanish{\renewcommand{\indexname}{\'Indice}}
+
+
+%%	HEADERS
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\, #1}}
+\lhead[\fancyplain{}{\bfseries\thepage}]%
+      {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]%
+      {\fancyplain{}{\bfseries\thepage}}
+\cfoot[]{}
+
+
+\hyphenation{con-si-de-re-mos cir-cun-fe-ren-cia cir-cun-fe-ren-cias
+con-si-de-re co-rres-pon-dien-tes co-rres-pon-dien-te con-gruen-tes cons-tru-ya cons-tru-yen
+con-si-de-rar con-cu-rren-tes cons-tru-ya-mos cir-cuns-cri-tas cir-cuns-cri-ta
+coin-ci-de cons-tru-ye ca-rac-te-ri-zan}
+\hyphenation{dia-go-nal dia-go-na-les de-si-gual-da-des des-cri-tas
+di-fe-ren-tes}
+\hyphenation{eu-cli-dea-na equi-va-len-te}
+\hyphenation{fi-gu-ras}
+\hyphenation{ge-ne-ra-li-dad}
+\hyphenation{in-me-dia-to ins-cri-to}
+\hyphenation{ma-yor ma-ne-ra}
+\hyphenation{or-to-cen-tro o-pues-tos}
+\hyphenation{po-si-ti-vos po-si-ti-vo pro-por-cio-na-li-dad 
+pa-ra-le-lo-gra-mo pers-pec-ti-va pa-ra-le-la per-pen-di-cu-lar pro-ble-mas 
+per-pen-di-cu-la-res}
+\hyphenation{re-fe-ren-cia re-fle-xio-nes res-pec-ti-va-men-te rec-tas 
+res-pec-to}
+\hyphenation{si-guien-te si-mi-la-res su-pon-ga-mos si-guien-tes su-ce-der
+sa-tis-fa-cen}
+\hyphenation{te-ne-mos tie-nen te-ner}
+\hyphenation{uti-li-ce usa-re-mos}
+\hyphenation{va-ria-bles}
+
+%Contadores de las listas
+\newcounter{num}
+\newcounter{numi}
+\newcounter{numii}
+
+\newcommand{\Hrule}{\rule{\linewidth}{1mm}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\zz}{\mathbb{Z}}
+\newcommand{\ii}{\mathbb{I}}
+\newcommand{\cc}{\mathbb{C}}
+\newcommand{\es}{\mathbb{L}}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\qq}{\mathbb{Q}}
+
+\newcommand{\FONTONCE}[1]{\fontsize{11pt}{11pt}\selectfont #1}
+
+
+
+\makeindex
+
+
+\newcommand{\veii}{\vspace{.5cm}}
+\newcommand{\vei}{\vspace{.15cm}}
+\newcommand{\ven}{\vspace{-.35cm}}
+\newcommand{\ve}{\vspace{.3cm}}
+\newcommand{\veg}{\vspace{.4cm}}
+\newcommand{\vs}{\vspace{3.5cm}}
+\newcommand{\vsa}{\vspace{7cm}}
+\newcommand{\fullref}[1]{\ref{#1} en la p\'agina~\pageref{#1}}
+
+\parindent=0in
+
+%%%%%Tamanio de Pagina
+%\setlength{\textwidth}{6in}
+%\setlength{\textheight}{8.5in}
+%\setlength{\topmargin}{.5in}
+%\setlength{\headsep}{.2in}
+%\setlength{\oddsidemargin}{0.5in}
+%\setlength{\evensidemargin}{0.5in}
+
+%Contadores de ejercicios
+\newcounter{prob}
+\setcounter{prob}{0}
+\newcounter{sol}
+\setcounter{sol}{0}
+\newcounter{refe}
+\setcounter{refe}{0}
+\newcounter{sugrefe}
+\setcounter{sugrefe}{0}
+\newcounter{ejcprel}
+\setcounter{ejcprel}{0}
+\newcounter{sucprel}
+\setcounter{sucprel}{0}
+\newcounter{surefcprel}
+\setcounter{surefcprel}{0}
+\newcounter{refejcprel}
+\setcounter{refejcprel}{0}
+\newcounter{ejercprogresiones}
+\setcounter{ejercprogresiones}{0}
+\newcounter{sugcprogresiones}
+\setcounter{sugcprogresiones}{0}
+\newcounter{sugrefecprogresiones}
+\setcounter{sugrefecprogresiones}{0}
+\newcounter{refejercprogresiones}
+\setcounter{refejercprogresiones}{0}
+\newcounter{ejercinduccion}
+\setcounter{ejercinduccion}{0}
+\newcounter{sugcinduccion}
+\setcounter{sugcinduccion}{0}
+\newcounter{sugrefecinduccion}
+\setcounter{sugrefecinduccion}{0}
+\newcounter{refejercinduccion}
+\setcounter{refejercinduccion}{0}
+\newcounter{ejercpolcuadcub}
+\setcounter{ejercpolcuadcub}{0}
+\newcounter{refejercpolcuadcub}
+\setcounter{refejercpolcuadcub}{0}
+\newcounter{sugcpolcuadcub}
+\setcounter{sugcpolcuadcub}{0}
+\newcounter{sugrefecpolcuadcub}
+\setcounter{sugrefecpolcuadcub}{0}
+\newcounter{ejerccomplejos}
+\setcounter{ejerccomplejos}{0}
+\newcounter{refejerccomplejos}
+\setcounter{refejerccomplejos}{0}
+\newcounter{sugccomplejos}
+\setcounter{sugccomplejos}{0}
+\newcounter{sugrefeccomplejos}
+\setcounter{sugrefeccomplejos}{0}
+\newcounter{ejercfunciones}
+\setcounter{ejercfunciones}{0}
+\newcounter{refejercfunciones}
+\setcounter{refejercfunciones}{0}
+\newcounter{sugcfunciones}
+\setcounter{sugcfunciones}{0}
+\newcounter{sugrefecfunciones}
+\setcounter{sugrefecfunciones}{0}
+\newcounter{ejercsucesiones}
+\setcounter{ejercsucesiones}{0}
+\newcounter{refejercsucesiones}
+\setcounter{refejercsucesiones}{0}
+\newcounter{sugcsucesiones}
+\setcounter{sugcsucesiones}{0}
+\newcounter{sugrefecsucesiones}
+\setcounter{sugrefecsucesiones}{0}
+\newcounter{ejercpolinomios}
+\setcounter{ejercpolinomios}{0}
+\newcounter{refejercpolinomios}
+\setcounter{refejercpolinomios}{0}
+\newcounter{sugcpolinomios}
+\setcounter{sugcpolinomios}{0}
+\newcounter{sugrefecpolinomios}
+\setcounter{sugrefecpolinomios}{0}
+
+
+
+
+\newcommand{\ejercpreliminares}[1]{
+	\stepcounter{ejcprel}
+	\refstepcounter{refejcprel}
+	\ifthenelse{\equal{\xxeleccion}{1}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejcprel}
+		\def\@currentlabel{\therefejcprel{}}
+		{\it #1 \par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solcpreliminares}[1]{
+	   \stepcounter{sucprel}
+	   \refstepcounter{surefcprel}
+           \ifthenelse{\equal{\xxeleccion}{11}}{
+		\noindent\textbf{Soluci\'on~1.\thesucprel}
+		\def\@currentlabel{\thesurefcprel{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+
+\newcommand{\ejercprogresiones}[1]{
+	\stepcounter{ejercprogresiones}
+	\refstepcounter{refejercprogresiones}
+	\ifthenelse{\equal{\xxeleccion}{2}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejercprogresiones}
+		\def\@currentlabel{\therefejercprogresiones{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solcprogresiones}[1]{
+	   \stepcounter{sugcprogresiones}
+	   \refstepcounter{sugrefecprogresiones}
+           \ifthenelse{\equal{\xxeleccion}{22}}{
+		\noindent\textbf{Soluci\'on~2.\thesugcprogresiones}
+		\def\@currentlabel{\thesugrefecprogresiones{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+\newcommand{\ejercinduccion}[1]{
+	\stepcounter{ejercinduccion}
+	\refstepcounter{refejercinduccion}
+	\ifthenelse{\equal{\xxeleccion}{3}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejercinduccion}
+		\def\@currentlabel{\therefejercinduccion{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solcinduccion}[1]{
+	   \stepcounter{sugcinduccion}
+	   \refstepcounter{sugrefecinduccion}
+           \ifthenelse{\equal{\xxeleccion}{33}}{
+		\noindent\textbf{Soluci\'on~3.\thesugcinduccion}
+		\def\@currentlabel{\thesugrefecinduccion{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+\newcommand{\ejerccomplejos}[1]{
+	\stepcounter{ejerccomplejos}
+	\refstepcounter{refejerccomplejos}
+	\ifthenelse{\equal{\xxeleccion}{5}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejerccomplejos}
+		\def\@currentlabel{\therefejerccomplejos{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solccomplejos}[1]{
+	   \stepcounter{sugccomplejos}
+	   \refstepcounter{sugrefeccomplejos}
+           \ifthenelse{\equal{\xxeleccion}{55}}{
+		\noindent\textbf{Soluci\'on~5.\thesugccomplejos}
+		\def\@currentlabel{\thesugrefeccomplejos{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+\newcommand{\ejercpolcuadcub}[1]{
+	\stepcounter{ejercpolcuadcub}
+	\refstepcounter{refejercpolcuadcub}
+	\ifthenelse{\equal{\xxeleccion}{4}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejercpolcuadcub}
+		\def\@currentlabel{\therefejercpolcuadcub{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solcpolcuadcub}[1]{
+	   \stepcounter{sugcpolcuadcub}
+	   \refstepcounter{sugrefecpolcuadcub}
+           \ifthenelse{\equal{\xxeleccion}{44}}{
+		\noindent\textbf{Soluci\'on~4.\thesugcpolcuadcub}
+		\def\@currentlabel{\thesugrefecpolcuadcub{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+\newcommand{\ejercfunciones}[1]{
+	\stepcounter{ejercfunciones}
+	\refstepcounter{refejercfunciones}
+	\ifthenelse{\equal{\xxeleccion}{6}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejercfunciones}
+		\def\@currentlabel{\therefejercfunciones{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solcfunciones}[1]{
+	   \stepcounter{sugcfunciones}
+	   \refstepcounter{sugrefecfunciones}
+           \ifthenelse{\equal{\xxeleccion}{66}}{
+		\noindent\textbf{Soluci\'on~6.\thesugcfunciones}
+		\def\@currentlabel{\thesugrefecfunciones{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+
+\newcommand{\ejercsucesiones}[1]{
+	\stepcounter{ejercsucesiones}
+	\refstepcounter{refejercsucesiones}
+	\ifthenelse{\equal{\xxeleccion}{7}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejercsucesiones}
+		\def\@currentlabel{\therefejercsucesiones{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solcsucesiones}[1]{
+	   \stepcounter{sugcsucesiones}
+	   \refstepcounter{sugrefecsucesiones}
+           \ifthenelse{\equal{\xxeleccion}{77}}{
+		\noindent\textbf{Soluci\'on~7.\thesugcsucesiones}
+		\def\@currentlabel{\thesugrefecsucesiones{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+
+\newcommand{\ejercpolinomios}[1]{
+	\stepcounter{ejercpolinomios}
+	\refstepcounter{refejercpolinomios}
+	\ifthenelse{\equal{\xxeleccion}{8}}{
+		\noindent\textbf{Ejercicio~\thechapter.\theejercpolinomios}
+		\def\@currentlabel{\therefejercpolinomios{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solcpolinomios}[1]{
+	   \stepcounter{sugcpolinomios}
+	   \refstepcounter{sugrefecpolinomios}
+           \ifthenelse{\equal{\xxeleccion}{88}}{
+		\noindent\textbf{Soluci\'on~8.\thesugcpolinomios}
+		\def\@currentlabel{\thesugrefecpolinomios{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+\newcommand{\problema}[1]{
+	\stepcounter{prob}
+	\refstepcounter{refe}
+	\ifthenelse{\equal{\xxeleccion}{9}}{
+		\noindent\textbf{Problema~\thechapter.\theprob}
+		\def\@currentlabel{\therefe{}}
+		{\it #1\par}
+		\bigskip
+	}{}
+}
+
+\newcommand{\solucion}[1]{
+	   \stepcounter{sol}
+	   \refstepcounter{sugrefe}
+           \ifthenelse{\equal{\xxeleccion}{99}}{
+		\noindent\textbf{Soluci\'on~9.\thesol}
+		\def\@currentlabel{\thesugrefe{}}
+		#1\par
+		\bigskip
+	}{}
+}
+
+\newcommand{\demostracion}[1]{
+		\noindent\textbf{Demostraci\'on.}
+		#1 \par
+		\bigskip
+}
+
+\newcommand{\pdemostracion}[1]{
+		\noindent\textbf{Primera demostraci\'on.}
+		#1 \par
+		\bigskip
+}
+
+\newcommand{\sdemostracion}[1]{
+		\noindent\textbf{Segunda demostraci\'on.}
+		#1 \par
+		\bigskip
+}
+
+\newcommand{\solu}[1]{
+		\noindent\textbf{Soluci\'on.}
+		#1 \par
+		\bigskip
+}
+
+
+\newcommand{\psolucion}[1]{
+		\noindent\textbf{Primera Soluci\'on.}
+		#1 \par
+		\bigskip
+}
+
+\newcommand{\ssolucion}[1]{
+		\noindent\textbf{Segunda Soluci\'on.}
+		#1 \par
+		\bigskip
+}
+
+
+\newcommand{\tsolucion}[1]{
+		\noindent\textbf{Tercera Soluci\'on.}
+		#1 \par
+		\bigskip
+}
+
+\newcommand{\csolucion}[1]{
+		\noindent\textbf{Cuarta Soluci\'on.}
+		#1 \par
+		\bigskip
+}
+
+
+
+\newcommand{\titulo}[1]{
+\def\xxtitulo{#1}
+}
+
+
+\psset{unit=.4cm}
+\psset{linewidth=1pt}
+\SpecialCoor
+
+
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{axioma}[teorema]{Axioma}
+\newtheorem{axiomas}[teorema]{Axiomas}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{propiedad}[teorema]{Propiedad}
+\newtheorem{proposicion}[teorema]{Proposici\'on}
+\newtheorem{ejemplos}[teorema]{Ejemplos}
+\newtheorem{ejercicios}[teorema]{Ejercicios}
+\newtheorem{soluciones}[teorema]{Soluciones}
+\newtheorem{sugerencias}[teorema]{Sugerencias}
+\newtheorem{ejercicio}[teorema]{Ejercicio}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{definicion}[teorema]{Definici\'on}
+\newtheorem{observacion}[teorema]{Observaci\'on}
+\newtheorem{observaciones}[teorema]{Observaciones}
+\newtheorem{propiedades}[teorema]{Propiedades}
+\newtheorem{algoritmo}[teorema]{Algoritmo}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%INICIO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\titulo{
+ \thispagestyle{empty}
+ \vfill
+ \noindent \Hrule
+ \begin{flushright}
+  {\bf\Huge Clase 3\\[1mm]
+}
+ \end{flushright}
+  \Hrule
+ \vfill
+ \begin{flushright}
+  {\bf\Large 
+%  Radmila Bulajich Manfrino\\[1.2mm]
+%  Jos'e Antonio G'omez Ortega\\[2.5mm]
+  Rogelio Valdez Delgado}
+ \end{flushright}
+
+\cleardoublepage
+
+}
+
+
+
+\frontmatter
+\xxtitulo
+\setcounter{page}{9}
+
+\thispagestyle{empty}
+        \markboth{}{}
+	 \Hrule
+        \begin{flushright}	
+           \huge\bf  Introducci'on
+        \end{flushright}
+       \Hrule
+        \bigskip
+	\addcontentsline{toc}{chapter}{\protect\numberline{}{\bf Introducci\'on}}
+	\markboth{}{Introducci\'on}
+	\input{introduccion}	
+	\newpage
+\tableofcontents
+\mainmatter
+ \input{preliminares.tex}
+% \input{progresiones.tex}
+% \input{induccion.tex}
+% \input{polinomioscuadycub.tex}
+% \input{complejos.tex}
+% \input{funciones.tex}
+% \input{sucesiones.tex}
+% \input{polinomios.tex}
+% \input{problemas.tex}
+ \input{todaslassolucionesb.tex}
+\cleardoublepage
+\rhead[\fancyplain{}{\bf Notaci\'on}]
+      {\fancyplain{}{\bfseries\thepage}}
+\thispagestyle{empty}
+        \markboth{}{}
+	 \Hrule
+        \begin{flushright}	
+           \huge\bf  Notaci'on
+        \end{flushright}
+       \Hrule
+	\addcontentsline{toc}{chapter}{\protect\numberline{}{\bf Notaci\'on}}
+	\markboth{}{Notaci\'on}
+	 \input{notacion} 	
+\include{bibliografia}
+\rhead[\fancyplain{}{\bf \'Indice}]
+      {\fancyplain{}{\bfseries\thepage}}
+\addcontentsline{toc}{chapter}{\protect\numberline{}{\bf \'Indice}}
+\printindex
+
+\end{document}
+

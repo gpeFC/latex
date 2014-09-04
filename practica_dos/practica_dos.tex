@@ -1,8 +1,10 @@
 \documentclass[spanish,12pt]{article}
+%\usepackage{utf8}
 %\usepackage[activeacute]{babel}
 %\usepackage{ulem}
 %\usepackage{shapepar}
 %\usepackage{picinpar}
+\usepackage{titling}
 \usepackage{enumerate}
 %\usepackage{endnotes}
 \usepackage{multicol}
@@ -26,44 +28,42 @@
 
 %\newtheorem{ejemplo}[teorema]{Ejemplo}
 
+\date{\today}
+
 \begin{document}
 
-\section{Herramientas b\'asicas de Formato}
+\begin{center}
+\section*{Herramientas b\'asicas de Formato}
+Emanuel GP
+\end{center}
 
-\subsection{El m'etodo del descenso infinito}
+\begin{flushright}
+\thedate
+\end{flushright}
 
-\begin{multicols}{2}[\section*{Consejo}]{
-Cuando animas a alguien que utilice LyX y que es usuario de esta plataforma, no le vas a hacer que se instale Linux si no quiere, así que le invitas a que se pase por la página oficial de LyX y que en descargas se baje el instalador.
-}
-\end{multicols}
-
-
-{\it El siguiente m'etodo de demostraci'on fue utilizado frecuentemente 
-por Pierre Fermat\footnote{Matem\'atico Frances} (1601-1665) por lo que a 'el se le atribuye. Por lo general, 
+\begin{multicols}{2}[\section{Descenso}]{
+El siguiente m'etodo de demostraci'on fue utilizado frecuentemente 
+por {\bf Pierre Fermat}\footnote{Matem\'atico Frances} (1601-1665) por lo que a 'el se le atribuye. Por lo general, 
 es usado para demostrar que algo no sucede. 
-Por ejemplo, Fermat lo utiliz'o
+Por ejemplo, {\bf Fermat}\footnote{Mismo Matem\'atico} lo utiliz'o
 para mostrar que no hay soluciones enteras de la ecuaci'on $x^4 + y^4=z^2$, 
-con $xyz\neq 0$.}
+con $xyz\neq 0$.
 
 
-{\bf La base te'orica de su m'etodo es que no hay una colecci'on 
+La base te'orica de su m'etodo es que no hay una colecci'on 
 infinita de enteros positivos que sea decreciente, esto es, no podemos 
 encontrar una infinidad de enteros positivos que cumplan 
-$n_1 > n_2 > n_3>\cdots$.}
+$n_1 > n_2 > n_3>\cdots$.
 
 \noindent Hay dos maneras de usar esta idea para demostrar afirmaciones. 
-\emph{La primera es tener una afirmaci'on} $\mathcal{P}(n_1)$ que se supone v'alida. 
+La primera es tener una afirmaci'on $\mathcal{P}(n_1)$ que se supone v'alida. 
 Si de 'esta se puede encontrar un entero positivo $n_2 <n_1$ tal que  
 $\mathcal{P}(n_2)$ es v'alida y, a su vez, si de 'esta se encuentra un 
 entero positivo $n_3< n_2$ tal que  $\mathcal{P}(n_3)$ es v'alida, y as'i 
 sucesivamente, entonces una infinidad de enteros positivos se genera de tal 
 forma  que cumple que $n_1>n_2>n_3>\cdots$, pero esto es imposible, por lo 
 que  $\mathcal{P}(n_1)$ no es verdadera. Veamos un ejemplo para ilustrar este 
-m'etodo.
-
-\vspace{.2in}
-
-\noindent {\bf Ejemplo.}\\
+m'etodo.}
 
 El n'umero $\sqrt{2}$ no es un n'umero racional\footnote{Fracci\'on}.
 
@@ -72,9 +72,11 @@ El n'umero $\sqrt{2}$ no es un n'umero racional\footnote{Fracci\'on}.
 \noindent Supongamos que $\sqrt 2$ es un n'umero racional, entonces 
 $\sqrt 2=\frac{m_1}{n_1}$, con $m_1$ y $n_1$ n'umeros enteros positivos.
 Como $\sqrt{2}+1=\frac{1}{\sqrt{2}-1}$, tenemos que
-$$
- \sqrt{2}+1=\frac{1}{\frac{m_1}{n_1}-1}=\frac{n_1}{m_1-n_1},\quad\text{por lo que}\quad   \sqrt{2}=\frac{n_1}{m_1-n_1}-1=\frac{2n_1-m_1}{m_1-n_1}.
-$$
+
+\begin{eqnarray*}		  
+ \sqrt{2}+1 &=& \frac{1}{\frac{m_1}{n_1}-1}\\=\frac{n_1}{m_1-n_1},\\
+ \quad\text{por lo que}\quad   \sqrt{2} &=& \frac{n_1}{m_1-n_1}-1=\frac{2n_1-m_1}{m_1-n_1}.
+\end{eqnarray*}
 
 \noindent Como  $1< \sqrt{2}<2$, sustituyendo el supuesto valor racional de $\sqrt{2}$ se tiene que  $1< \frac{m_1}{n_1}<2$, de donde
 $n_1 < m_1 < 2n_1$. De aqu'i tenemos que, $2n_1-m_1 >0$ y $m_1- n_1 >0$. Luego, si definimos $m_2=2n_1-m_1$ y $n_2=m_1-n_1$, tenemos que $m_2< m_1$ y   $n_2<n_1$, ya que $n_1<m_1$ y $m_1<2n_1$, respectivamente. Luego, $\sqrt{2}=\frac{m_1}{n_1}=\frac{m_2}{n_2}$, con $m_2<m_1$ y $n_2<n_1$. Siguiendo este proceso, podemos generar una infinidad de enteros positivos\footnote{Naturales} $m_i$ y $n_i$ que cumplen que
@@ -82,6 +84,9 @@ $$ \sqrt{2} =\frac{m_1}{n_1}=\frac{m_2}{n_2}=\frac{m_3}{n_3}=\cdots,$$
 con $m_1 >m_2>m_3>\cdots$ y $n_1 >n_2>n_3>\cdots$,
 pero esto no es posible. Por lo tanto, $\sqrt{2}$ no es un n'umero racional.
 
- 
+\end{multicols}
+
+\vspace{.2in}
+
 
 \end{document}

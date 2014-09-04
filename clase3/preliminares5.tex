@@ -1,0 +1,224 @@
+\section{Matrices y determinantes}
+\label{cap1sec1}
+
+\noindent Una {\bf matriz de $2\times 2$} es un arreglo\index{Matriz!$2\times 2$} 
+$$
+     \left (\begin{array}{cc}
+                 a_{11} &  a_{12}\\[1mm]
+                 a_{21} &  a_{22}\\[1mm]
+              \end{array}\right )
+$$
+donde $a_{11}$, $a_{12}$, $a_{21}$ y $a_{22}$ son n'umeros reales o 
+complejos\footnote{Los n'umeros complejos los trataremos en el cap'itulo   \ref{numeroscomplejos}.}. 
+\noindent El {\bf determinante} de la matriz anterior, \index{Determinante!matriz $2\times 2$} que denotamos por
+$$
+     \left |\begin{array}{cc}
+                 a_{11} &  a_{12}\\[1mm]
+                 a_{21} &  a_{22}\\[1mm]
+              \end{array}\right |
+$$
+es el n'umero real definido por 
+$a_{11}a_{22}- a_{12}a_{21}.$
+
+\vei
+
+\noindent Una {\bf matriz de $3\times 3$} es un arreglo\index{Matriz!$3\times 3$} 
+$$
+     \left (\begin{array}{ccc}
+                 a_{11} &  a_{12} &a_{13}\\[1mm]
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right )
+$$
+donde, nuevamente, cada $a_{ij}$ es un n'umero. Los sub'indices nos indican 
+la po\-sici'on del n'umero en el arreglo.  As'i, $a_{ij}$ se encuentra en el 
+$i$-'esimo
+rengl'on y la $j$-'esima columna.  Definimos el {\bf determinante de una matriz de 
+$3\times 3$} por la regla\index{Determinante!matriz $3\times 3$}
+$$
+     \left |\begin{array}{ccc}
+                 a_{11} &  a_{12} &a_{13}\\[1mm]
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right |=
+      a_{11} \left |\begin{array}{cc}
+                  a_{22} &a_{23}\\[1mm]
+                 a_{32} &  a_{33}
+              \end{array}\right |-
+      a_{12} \left |\begin{array}{cc}
+                  a_{21} &a_{23}\\[1mm]
+                 a_{31} &  a_{33}
+              \end{array}\right | +
+       a_{13} \left |\begin{array}{cc}
+                  a_{21} &a_{22}\\[1mm]
+                 a_{31} &  a_{32}
+              \end{array}\right |. 	      	        	      	      
+$$
+Es decir, nos movemos a lo largo del primer rengl'on, multiplicando $a_{1j}$ por
+el determinante de la matriz de $2\times 2$ obtenida al eliminar el primer
+rengl'on y la $j$-'esima columna, y despu'es sumando todo esto, pero recordando
+poner un signo negativo antes de $a_{12}$. Cabe aclarar que el resultado del
+determinante no se altera si en lugar de escoger el primer rengl'on como primer
+paso escogemos el segundo o el tercero. En caso de que escojamos el segundo
+rengl'on iniciamos con un signo negativo y si escogemos el tercer rengl'on el
+primer signo es positivo, es decir,
+$$
+     \left |\begin{array}{ccc}
+                 a_{11} &  a_{12} &a_{13}\\[1mm]
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right |=
+      -a_{21} \left |\begin{array}{cc}
+                  a_{12} &a_{13}\\[1mm]
+                 a_{32} &  a_{33}
+              \end{array}\right |+
+      a_{22} \left |\begin{array}{cc}
+                  a_{11} &a_{13}\\[1mm]
+                 a_{31} &  a_{33}
+              \end{array}\right | -
+       a_{23} \left |\begin{array}{cc}
+                  a_{11} &a_{12}\\[1mm]
+                 a_{31} &  a_{32}
+              \end{array}\right |. 	      	        	      	      
+$$
+Los signos se van alternando, siguiendo el siguiente diagrama
+$$
+     \left |\begin{array}{ccc}
+                 + &  - & +\\[1mm]
+                 - &  + & -\\[1mm]
+		 + & -  &+
+              \end{array}\right |. 	      	        	      	      
+$$
+
+\noindent Los determinantes cumplen varias propiedades, que son inmediatas de las definiciones, las m'as 'utiles son las siguientes.
+\index{Determinante!propiedades del}
+\begin{propiedades}
+$(a)$\; Al intercambiar dos renglones consecutivos o dos columnas consecutivas, el signo del determinante cambia, por ejemplo,
+$$
+     \left |\begin{array}{ccc}
+                 a_{11} &  a_{12} &a_{13}\\[1mm]
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right |= -
+     \left |\begin{array}{ccc}
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+                 a_{11} &  a_{12} &a_{13}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right |.
+$$	      
+
+$(b)$\;  Se puede sacar un factor com'un a cualquier rengl'on o columna de una 
+matriz y los determinantes  se relacionan de la siguiente manera, por ejemplo, 
+$$
+     \left |\begin{array}{ccc}
+                \alpha a_{11} & \alpha a_{12} &\alpha a_{13}\\[1mm]
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right |= \alpha
+     \left |\begin{array}{ccc}
+                 a_{11} &  a_{12}&a_{13}\\[1mm]
+                 a_{21} &  a_{22} &a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right |.	      
+$$
+$(c)$\; Si a un rengl'on (o columna) le sumamos otro rengl'on (o
+ columna), el valor del determinante no cambia, por ejemplo, 
+\label{sumarenglonesdet}
+\begin{eqnarray*}
+     \left |\begin{array}{ccc}
+                a_{11} &  a_{12} & a_{13}\\[1mm]
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right | & = &
+     \left |\begin{array}{ccc}
+                 a_{11}+a_{21}  &  a_{12}+a_{22}  & a_{13}+a_{23} \\[1mm]
+                 a_{21} &  a_{22}&a_{23}\\[1mm]
+		 a_{31} &  a_{32}&a_{33}
+              \end{array}\right |\\[1mm]
+                         &=&    	\left ( \text{o} \ \ \
+\left |\begin{array}{ccc}
+                 a_{11}+a_{12} &  a_{12} & a_{13}\\[1mm]
+                 a_{21}+a_{22} &  a_{22}&a_{23}\\[1mm]
+		 a_{31}+a_{32} &  a_{32}&a_{33}
+              \end{array}\right |, \right ).
+\end{eqnarray*}	      	
+$(d)$\; Si una matriz tiene dos renglones  (o dos columnas) iguales el
+determinante es cero.
+\end{propiedades}
+
+\begin{ejemplo}
+\label{ejemplocubicas}
+Usando determinantes podemos establecer la siguiente iden\-tidad
+\begin{equation}
+a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-bc-ca).
+\label{abccubicas}
+\end{equation}
+\end{ejemplo}
+\noindent Notemos que 
+\begin{eqnarray}
+     D & = &\left |\begin{array}{ccc}
+                a &  b & c\\[1mm]
+                c &  a & b\\[1mm]
+		 b &  c& a
+              \end{array}\right |  =  a
+            \left |\begin{array}{cc}
+                  a &b\\[1mm]
+                 c &  a
+              \end{array}\right |-
+      b \left |\begin{array}{cc}
+                  c & b\\[1mm]
+                 b & a
+              \end{array}\right | +
+        c \left |\begin{array}{cc}
+                  c & a\\[1mm]
+                  b &  c
+              \end{array}\right |\nonumber\\
+	      & = & a^3-abc-abc+b^3+c^3-abc=a^3+b^3+c^3-3abc. 	      	      	      \label{ecuacioncubicacondeterminantes}	      
+\end{eqnarray}
+Por otro lado, sumando a la primera columna las otras dos, tenemos
+\begin{eqnarray*}
+     D & = & \left |\begin{array}{ccc}
+                a+b+c &  b & c\\[1mm]
+                a+b+c &  a & b\\[1mm]
+		 a+b+c &  c& a
+              \end{array}\right |  =  (a+b+c)
+            \left |\begin{array}{ccc}
+                1 &  b & c\\[1mm]
+                1 &  a & b\\[1mm]
+		1 &  c& a
+              \end{array}\right | \\[2mm]
+	         & = & (a+b+c)(a^2+b^2+c^2-ab-bc-ca).
+        \end{eqnarray*}
+Por las propiedades $(b)$ y  ($c$), los determinantes son iguales. 
+
+\vei
+
+\noindent Observemos que la expresi'on $a^2+b^2+c^2-ab-bc-ca$ se puede 
+escribir como\footnote{Ver el ejercicio 1.\ref{equisyeyzetaalcuadrado}.} 
+\begin{equation*}
+      \frac{1}{2} \left [ (a-b)^2+(b-c)^2 +(c-a)^2\right ].
+\label{factorizaciondeacubica}
+\end{equation*}      
+Con esto obtenemos otra versi'on de la identidad (\ref{abccubicas}), es decir,
+\begin{equation}
+a^3+b^3+c^3-3abc=\frac{1}{2}(a+b+c)\left [ (a-b)^2+(b-c)^2 +(c-a)^2\right ].
+\label{a3masb3masc3matrices}	     
+\end{equation}
+
+\vei
+
+\noindent Observemos que si en la identidad anterior se cumple la condici'on 
+$a+b+c=0$ o  la condici'on $a=b=c$, entonces tenemos  la siguiente identidad
+\begin{equation}
+a^3+b^3+c^3=3abc.
+\label{a3masb3masc3igual0}
+\end{equation}
+Rec'iprocamente, si sucede la identidad (\ref{a3masb3masc3igual0}), entonces 
+debe de cumplirse que $a+b+c=0$ o bien $a=b=c$.
+
+\ve
+\ve
+\input{preliminares5-1.tex}
+
+
+

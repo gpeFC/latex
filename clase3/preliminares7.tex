@@ -1,0 +1,196 @@
+
+\section{Factorizaci'on}
+\label{cap1sec3}
+
+\index{Factorizaci'on}
+\noindent Una de las formas m'as importantes de manipulaci'on algebraica  
+es la que se conoce como factorizaci'on. En esta secci'on estudiamos algunos 
+ejemplos y problemas cuya soluci'on
+depende del conocimiento de  f'ormulas  de factorizaci'on.
+Muchos de los problemas ol'impicos que involucran expresiones algebraicas se 
+resuelven f'acilmente haciendo uso de transformaciones algebraicas que 
+utilizan factorizaciones apropiadas.
+Empecemos con  algunas  f'ormulas  elementales de factorizaci'on, donde $x$, 
+$y$ son  n'umeros reales:
+\begin{description}
+\item[$(a)$] $x^2 - y^2 =(x+y)(x-y)$.
+\item[$(b)$]  $x^2 +2xy + y^2 = (x+y)^2$ y $x^2-2xy+y^2 = (x-y)^2$.
+\item[$(c)$]  $x^2+y^2+z^2+2xy+2yz+2zx =(x+y+z)^2$.
+\end{description}
+
+\noindent Estas identidades algebraicas se catalogan como identidades de grado $2$. De hecho, estas cuatro identidades fueron ya estudiadas en la secci'on de productos notables, sin embargo, lo que se desea hacer ahora es, dada una expresi'on algebraica, reducirla a un producto de expresiones algebraicas  m\'as simples.
+
+\vei
+
+\begin{ejemplo} Para n\'{u}meros reales $a$, $b$, $x$, $y$, con $x$ y $y$ 
+distintos de cero,  se tiene que  
+$$
+            \frac{a^{2}}{x}+\frac{b^{2}}{y}-\frac{(a+b)^{2}}{x+y}=\frac{(ay-bx)^{2}}{xy(x+y)}.
+$$
+\end{ejemplo}
+Para obtener la igualdad que se pide, empecemos realizando la suma del lado izquierdo de la  identidad,
+\begin{eqnarray*}
+\frac{a^{2}}{x}+\frac{b^{2}}{y}-\frac{(a+b)^{2}}{x+y} & = & \frac{a^2 y (x+y)+ b^2 x (x+y) -
+xy (a+b)^2}{xy(x+y)} \\
+& = & \frac{a^2 y^2 + b^2 x^2 - 2xyab}{xy(x+y)}\\
+& = & \frac{(ay-bx)^{2}}{xy(x+y)}.
+\end{eqnarray*}
+
+\vei
+
+\noindent Una aplicaci\'on de la identidad anterior nos lleva a una 
+demostraci'on inmediata de la {\bf desigualdad 'util}\footnote{Ver 
+\cite{bulajich1}, p'ag. 40  o \cite{bulajich} p'ag. 34.} de grado $2$. 'Esta asegura que 
+para n\'{u}meros reales $a$, $b$ y n\'{u}meros reales positivos $x$, $y$, 
+se cumple que
+\index{Desigualdad!'util}
+$$
+\frac{a^{2}}{x}+\frac{b^{2}}{y}\geq \frac{(a+b)^{2}}{x+y}.
+$$
+
+\vei
+
+\noindent Las siguientes identidades son de grado $3$, con $x$, $y$, $z \in \mathbb{R}$:
+\begin{description}
+\item[$(a)$] $x^{3}-y^{3}=(x-y)\left( x^{2}+xy+y^{2}\right)$.
+\item[$(b)$] $x^{3}-y^{3}=(x-y)^{3}+3xy(x-y)$.
+\item[$(c)$] $(x+y)^{3}-(x^{3}+y^{3})=3xy(x+y)$.
+\item[$(d)$] $x^{3}-xy^{2}+x^{2}y-y^{3}=(x+y)(x^{2}-y^{2})$.
+\item[$(e)$] $x^{3}+xy^{2}-x^{2}y-y^{3}=(x-y)(x^{2}+y^{2})$.
+\end{description}
+
+\noindent Para comprobar la validez de las identidades anteriores basta desarrollar alguno de los lados o utilizar el teorema del binomio de Newton, el cual se estudiar'a en la secci'on \ref{coeficientesbinomiales}.
+
+\vei
+
+\noindent Otra identidad  de grado $3$ muy importante y que ya mencionamos en la identidad (\ref{abccubicas}) es
+$$
+x^{3}+y^{3}+z^{3}-3xyz=(x+y+z)(x^{2}+y^{2}+z^{2}-xy-yz-zx),
+$$
+para cualesquiera n'umeros reales $x$, $y$, $z$.  Una demostraci'on de 'esta se obtiene simplemente desarrollando el lado derecho de la identidad.  A lo largo del libro veremos otras demostraciones de esta igualdad. 
+
+Una forma equivalente de la identidad anterior es
+$$
+x^{3}+y^{3}+z^{3}-3xyz=\frac{1}{2}(x+y+z)\left[ \left( x-y\right)
+^{2}+(y-z)^{2}+(z-x)^{2}\right].
+$$
+
+\vei
+
+
+\noindent Las identidades $x^2 - y^2 =(x+y)(x-y)$ y $x^{3}-y^{3}=(x-y)\left( x^{2}+xy+y^{2}\right)$
+son casos particulares de la identidad de grado $n$,
+\begin{equation}
+      x^n-y^n=(x-y)(x^{n-1} + x^{n-2} y + \cdots + x y^{n-2} + y^{n-1}),
+\label{antesdesophie}
+\end{equation}
+para cualesquiera n'umeros reales $x$, $y$.
+
+\noindent Si $n$ es impar, podemos reemplazar $y$ por $-y$ en la 'ultima f'ormula para obtener
+la f'ormula de factorizaci'on para la suma de dos potencias $n$-'esimas impares,
+\begin{equation}
+x^n+y^n=(x+y)(x^{n-1} - x^{n-2} y + \cdots - x y^{n-2} + y^{n-1}).
+\label{identidadxalanyalan}
+\end{equation}
+
+\noindent En general, la suma de potencias $n$-\'esimas pares no es factorizable, aunque existen algunas
+excepciones cuando es posible completar cuadrados, veamos el siguiente ejemplo.
+
+\begin{ejemplo}(Identidad de Sophie Germain) Para cualesquiera n'umeros reales $x$, $y$ se tiene que
+\label{sophiegermain}\index{Identidad de Sophie Germain}
+$$
+x^{4}+4y^{4} =(x^{2}+2y^{2}+2xy)(x^{2}+2y^{2}-2xy).
+$$
+\end{ejemplo}
+
+\noindent Completando cuadrados, tenemos
+\begin{eqnarray*}
+     x^{4}+4y^{4} & = & x^{4}+4x^2y^2+4y^{4}- 4x^2y^2=(x^{2}+2y^{2})^2-(2xy)^2\\
+            & = &(x^{2}+2y^{2}+2xy)(x^{2}+2y^{2}-2xy).
+\end{eqnarray*}
+
+\noindent Otro ejemplo, con potencias pares es el siguiente.
+
+\begin{ejemplo} Para cualesquiera n'umeros reales $x$, $y$, se tiene que
+$$
+x^{2n}-y^{2n} =(x+y)(x^{2n-1}-x^{2n-2}y+x^{2n-3}y^{2}-\cdots+xy^{2n-2}-
+y^{2n-1}).
+$$
+\end{ejemplo}
+\noindent Para comprobar esto simplemente tenemos que hacer la divisi'on de $x^{2n}-y^{2n}$ entre $x+y$ o bien realizar el producto de la derecha y simplificar.
+
+\begin{ejemplo} Veamos que  $n^4 - 22n^2+9$ es un n'umero compuesto para cualquier entero $n$.
+\end{ejemplo}
+La idea para mostrar lo que se pide es tratar de factorizar la expresi'on. Inten\-temos completar cuadrados, la forma m'as com'un de hacerlo es la siguiente
+$$
+         n^4-22n^2+9= (n^4 - 22n^2 + 121)-112=(n^2 - 11)^2-112,
+$$
+el problema que tenemos es que $112$ no es un cuadrado perfecto, por lo que no es inmediato factorizar. Sin embargo, podemos utilizar la siguiente forma, menos usual, de completar cuadrados
+\begin{eqnarray*}
+n^4-22n^2+9 & = & (n^4 - 6n^2 + 9)- 16n^2=(n^2-3)^2-16n^2\\
+            & = & (n^2-3)^2-(4n)^2=(n^2-3+4n)(n^2-3-4n)\\
+            & = & ((n+2)^2-7)((n-2)^2-7),
+\end{eqnarray*}
+y observemos que ninguno de los dos 'ultimos factores es igual a $\pm 1$.
+\vei
+
+\noindent El siguiente es otro ejemplo de c'omo utilizando formas b'asicas de 
+factorizaci'on podemos  resolver problemas.
+
+\begin{ejemplo}
+Encontremos todas las parejas $(m,n)$ de n'umeros enteros positivos 
+tales que $|3^m - 2^n|=1$.
+\end{ejemplo}
+Cuando $m=1$ o $m=2$, es f'acil encontrar las soluciones $(m,n)=(1,1)$, 
+$(1,2)$, $(2,3)$. Ahora
+mostremos que no hay otras soluciones. Supongamos que $(m,n)$ es una 
+soluci'on de $|3^m - 2^n|=1$, con $m > 2$, y por lo tanto $n > 3$. Analicemos 
+los dos casos: $3^m - 2^n=1$ y $3^m - 2^n=-1$.
+
+\noindent Supongamos que $3^m - 2^n=-1$ con $n > 3$, entonces $3^m+1$ es 
+divisible entre $8$, sin embargo
+al dividir $3^m$ entre $8$ obtenemos como residuo $1$ o $3$, dependiendo de 
+si $n$ es par o impar, por lo que
+en este caso no hay soluci'on.
+
+\noindent Supongamos que $3^m - 2^n=1$ con $m\geq  3$, por lo que $n\geq 5$, 
+ya que $2^n+1=3^m\geq 27$. Entonces $3^m-1$ es divisible entre $8$, por lo
+cual $m$ es par, digamos $m=2k$, con $k >1$. Entonces 
+$2^n = 3^{2k}-1=(3^k+1)(3^k-1)$. 
+
+Luego,
+$3^k+1=2^r$, para alguna $r >3$, pero por el caso anterior sabemos que esto 
+es imposible, luego en este caso tampoco hay soluciones. 
+
+
+\ve
+
+\noindent Otras  f'ormulas  'utiles de factorizaci'on son las siguientes.
+Para n\'{u}meros reales $x$, $y$, $z$ se cumplen las siguientes igualdades:
+\begin{equation}
+\label{productodetres}
+(x+y)(y+z)(z+x)+xyz=(x+y+z)(xy+yz+zx)
+\end{equation}
+\begin{equation}
+(x+y+z)^{3}=x^{3}+y^{3}+z^{3}+3(x+y)(y+z)(z+x).
+\end{equation}
+Para convencerse, basta desarrollar ambos lados de cada igualdad.
+De estas identidades tenemos la siguiente observaci'on. 
+
+\begin{observacion}
+$(a)$\; Si $x$, $y$, $z$ son n\'{u}meros reales, con $xyz=1$, entonces
+\begin{equation}
+(x+y)(y+z)(z+x)+1=(x+y+z)(xy+yz+zx).
+\end{equation}
+\label{observacionabcigual1}
+$(b)$\; Si $x$, $y$, $z$ son n\'{u}meros reales con $xy+yz+zx=1$, entonces
+\begin{equation}
+(x+y)(y+z)(z+x)+xyz=x+y+z.
+\end{equation}
+\end{observacion}
+
+\ve
+\vei
+
+\input{preliminares7-1.tex}
+

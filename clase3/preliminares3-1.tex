@@ -1,0 +1,147 @@
+%%% 18
+\ejercpreliminares{Para cualesquiera n'umeros reales $a$, $b>0$, 
+se tiene que
+$$
+ \lfloor 2a \rfloor + \lfloor 2b \rfloor \geq \lfloor a \rfloor 
++\lfloor b \rfloor +\lfloor a+b\rfloor.
+$$
+}
+
+\solcpreliminares{Por el ejemplo \ref{exismasunmediomenosdosexis}, 
+$\lfloor 2a\rfloor = \lfloor a\rfloor + \lfloor a+\frac{1}{2}\rfloor$ 
+y $\lfloor 2b\rfloor = \lfloor b\rfloor + \lfloor b+\frac{1}{2}\rfloor$, 
+luego la desigualdad a demostrar es equivalente a
+$$
+  \lfloor a\rfloor + \left\lfloor a+\frac{1}{2}\right\rfloor+ 
+\lfloor b\rfloor + \left\lfloor b+\frac{1}{2}\right\rfloor \geq 
+\lfloor a\rfloor + \lfloor b\rfloor+ \lfloor a+b\rfloor,
+$$
+de donde bastar'a mostrar que $ \left\lfloor a+\frac{1}{2}\right\rfloor+
+\left\lfloor b+\frac{1}{2}\right\rfloor \geq  \lfloor a+b\rfloor$.
+
+Sean $a = n+y$, $b = m+x$, con $n, m\in \zz$ y $0\leq x, y < 1$. Entonces 
+$0\leq x+ y <2$ y $a+b=n+m+x+y$.  Se tienen dos casos:
+
+$(i)$ Si $1\leq x + y < 2$, entonces  $\lfloor a+ b\rfloor= n+m+1$ 
+y al menos uno de los n'umeros $x$ o $y$ es mayor o igual que 
+$\frac{1}{2}$.  Suponga que $x\geq \frac{1}{2}$. Entonces  
+$\lfloor b+\frac{1}{2}\rfloor= \lfloor m+x+\frac{1}{2}\rfloor = m+1$, 
+por lo que $ \lfloor a+\frac{1}{2}\rfloor+\lfloor b+
+\frac{1}{2}\rfloor\geq m+n+1=\lfloor a+b\rfloor$.  
+
+
+$(ii)$ Si $0\leq x + y < 1$, entonces  $\lfloor a+ b\rfloor= n+m$ y  
+$ \lfloor a+\frac{1}{2}\rfloor+\lfloor b+\frac{1}{2}\rfloor\geq m+n 
+=\lfloor a+b\rfloor$.
+}
+
+
+%%%%%%% 19
+\ejercpreliminares{Encuentre  los valores de $x$ que cumplen 
+la siguiente ecuaci'on:
+
+$(i)$\,   $\lfloor x \lfloor x \rfloor  \rfloor =1$.
+
+$(ii)$\,   $||x|-\lfloor x \rfloor| = \lfloor |x|- \lfloor x\rfloor\rfloor$.
+}
+
+\solcpreliminares{$(i)$\,   Se tiene que $\lfloor x \lfloor x \rfloor  
+\rfloor =1$ si y s'olo si
+$1\leq x\lfloor x \rfloor < 2$.  Si $x=m+y$, con $m\in\zz$ y $0\leq y <1$, 
+entonces $1\leq m^2+my < 2$. Observe que   $m=0$ es imposible, al igual que 
+$m\geq 2$ o $m\leq -2$.  Luego, resta ver qu'e sucede si $m=1$ o $m=-1$. 
+
+Si $m=1$, entonces $1\leq 1+y<2$, de donde $0\leq y <1$ y entonces cualquier 
+$x$ en el intervalo $[1,2)$ cumple la ecuaci'on.  Si $m=-1$, entonces, como
+\linebreak 
+$1\leq m^2+my < 2$, se  tiene que  $1\leq 1- y<2$, de donde $0\leq - y < 1$ 
+y entonces  $y=0$ y $x=-1$.  
+Por lo tanto, los n'umeros que cumplen la ecuaci'on son $x=-1$ y  
+$x\in [1,2)$.
+
+\vei 
+
+$(ii)$\,   Como $\lfloor x \rfloor \leq x \leq |x|$, se tiene que,
+$ |x|- \lfloor x \rfloor \geq 0$, por lo que\linebreak  $||x|-\lfloor x\rfloor |= 
+|x| -\lfloor x\rfloor$.  Por otro lado,  por la propiedad $(c)$ en 
+\ref{parteentera} se\linebreak  tiene que, $\lfloor |x|-\lfloor x\rfloor\rfloor 
+= \lfloor |x|\rfloor -\lfloor x\rfloor$. Utilizando las 'ultimas igualdades 
+la ecuaci'on se convierte en $|x| - \lfloor x\rfloor = \lfloor |x|\rfloor - 
+\lfloor x\rfloor$ que es equivalente a $|x| = \lfloor |x| \rfloor$, luego 
+$|x|$ es un n'umero entero y los valores de $x$ que cumplen la ecuaci'on 
+son todos los n'umeros enteros.
+}
+
+
+
+%%% 20
+\ejercpreliminares{Encuentre las soluciones del sistema de ecuaciones
+\begin{eqnarray*}
+x+\lfloor y \rfloor + \{z\} & = & 1.1,\\
+\lfloor x \rfloor + \{y\}+z & = & 2.2,\\
+\{x\} + y + \lfloor z \rfloor & = & 3.3.
+\end{eqnarray*}
+}
+
+\solcpreliminares{Sume las tres ecuaciones para obtener que 
+$2x+2y+2z=6.6$, luego $x+y+z=3.3$. Reste a esta 'ultima igualdad las ecuaciones
+originales, para obtener $\{y\} + \lfloor z \rfloor =2.2$, 
+$\{x\} + \lfloor y \rfloor =1.1$,
+$\{z\}+\lfloor x \rfloor =0$.
+La primera ecuaci'on da $\lfloor z \rfloor = 2$, $\{y\}=0.2$, la segunda 
+$\lfloor y \rfloor=1$, $\{x\}=0.1$ y, la tercera $\lfloor x \rfloor=0$ y
+$\{z\}=0$. Por lo tanto, la soluci'on es $x=0.1$, $y=1.2$ y $z=2$.
+}
+
+
+%%%%%%% 21
+\ejercpreliminares{(Canad'a, 1987) Para cada n'umero natural $n$, 
+muestre que
+$$
+         \lfloor \sqrt{n} +\sqrt{n+1} \rfloor = \lfloor \sqrt{4n+1} \rfloor=\lfloor \sqrt{4n+2} \rfloor=\lfloor \sqrt{4n+3} \rfloor. 
+$$
+}
+
+\solcpreliminares{Se tiene que  $\sqrt{n} +\sqrt{n+1} < \sqrt{4n+2} $ si y 
+s'olo si $2n+1+\sqrt{4n^2+4n} < 4n+2$, que es equivalente a $\sqrt{4n^2+4n} < 
+2n+1$. Elevando al cuadrado nuevamente, la 'ultima desigualdad es equivalente 
+a $4n^2+4n < 4n^2+4n+1$.  Esto prueba que $\sqrt{n} +\sqrt{n+1} < \sqrt{4n+2}$,
+entonces $\lfloor \sqrt{n} +\sqrt{n+1}\rfloor 
+\leq \lfloor \sqrt{4n+2}\rfloor$.  
+
+\vei
+
+Suponga que, para alg'un n'umero entero positivo $n$, 
+$\lfloor \sqrt{n} +\sqrt{n+1}\rfloor \neq \lfloor \sqrt{4n+2}\rfloor$. Sea 
+$q= \lfloor \sqrt{4n+2}\rfloor$, entonces $\sqrt{n} +\sqrt{n+1}< q \leq 
+\sqrt{4n+2}$.  Elevando al cuadrado, se  obtiene que $2n+1+ \sqrt{4n^2+4n} < 
+q^2\leq 4n+2$ o lo que es equivalente $\sqrt{4n^2+4n} < q^2-2n - 1 \leq 2n+1$.
+Elevando al cuadrado nuevamente se\linebreak obtiene que  
+$4n^2+4n < (q^2-2n - 1)^2 
+\leq 4n^2+4n+1= (2n+1)^2$. Como no \linebreak existe un cuadrado entre dos 
+enteros 
+consecutivos, se tiene que $q^2-2n - 1 = 2n+1$ o que
+$q^2 = 4n+2$, que es equivalente a decir que $q^2\equiv 2 \mod 4$.  Pero esto 
+'ultimo es una contradicci'on, ya que todo cuadrado es congruente a 0 o a 1 
+m'odulo $4$. Por lo tanto,  se tiene la igualdad.
+
+\vei
+
+Muestre ahora que, $\lfloor \sqrt{4n+1} \rfloor=\lfloor \sqrt{4n+2} 
+\rfloor=\lfloor \sqrt{4n+3} \rfloor$. 
+
+Para la  primera igualdad, suponga que 
+existe una $n$ tal que $m=\lfloor \sqrt{4n+1} \rfloor < m+1=
+\lfloor \sqrt{4n+2} \rfloor$, luego $m \leq \sqrt{4n+1} < m+1 \leq 
+\sqrt{4n+2}$, por lo que 
+$m^2 \leq 4n+1 < (m+1)^2\leq 4n+2$. 
+
+Entonces, como $4n+1$ y 
+$4n+2$ son dos n'umeros enteros consecutivos y, como $(m+1)^2 > 4n+1$, se 
+tiene que $(m+1)^2 = 4n+2$ y nuevamente se ha encontrado un cuadrado que 
+tiene residuo $2$ al dividirlo entre $4$, lo cual es imposible. Para la 
+segunda igualdad, proceda de la misma forma. 
+}
+
+
+

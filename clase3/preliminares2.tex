@@ -1,0 +1,184 @@
+\section{Valor absoluto}
+\label{valorabsoluto}
+
+\noindent Definimos el {\bf  valor absoluto}\index{Valor absoluto} de un n'umero real $x$ como
+\begin{equation}
+\label{ecuac1.3.1}
+     |x|=\left \{\begin{array}{lc}
+                 x, & \makebox[1cm]{si} x \geq 0,\\[2mm]
+                 -x, & \makebox[1cm]{si} x < 0.
+              \end{array}\right.
+\end{equation}
+
+
+\noindent Para $k$ un n'umero real no negativo, la identidad $|x|=k$ s'olo la satisfacen los n'umeros $x=k$ y $x=-k$.
+
+\noindent La desigualdad $|x|\leq k$ es equivalente a
+$-k\leq x\leq k$, lo cual podemos ver de la siguiente manera. Si $x\geq 0$, entonces
+$0\leq x=|x|\leq k$. Por otro lado, si $x\leq 0$, entonces $-x=|x|\leq k$, de donde $x\geq -k$.  Como consecuencia de lo anterior observemos que $x\leq |x|$.  En la figura siguiente se muestran los valores de $x$ que
+satisfacen la desigualdad,  'estos son los que se encuentran entre $-k$ y $k$, incluy'endolos.  Al conjunto $[-k,k]=\{x\in\rr\, |\, -k\leq x\leq k\}$ le llamamos un {\bf intervalo cerrado}, ya que contiene a $k$ y $-k$.\index{Intervalo!cerrado} A $-k$ y $k$ les llamamos los {\bf puntos extremos} del intervalo. \index{Puntos extremos}
+
+\centerline{
+ \begin{pspicture}(6,0)(7,4)
+ \psset{unit=1cm}
+	\psline(1,1)(2,1)
+	\psline(4,1)(5,1)
+	\psset{linewidth=2.5pt}
+	\psline(2,1)(4,1)
+	\rput{0}(2,.5){\large $-k$}
+	\rput{0}(4,.5){\large $k$}
+	\rput{0}(3,.5){ $O$}
+	\rput{0}(3,1){\large $|$}
+	\rput{0}(2,1){\large [}
+	\rput{0}(4,1){\large ]}
+ \end{pspicture}
+}
+
+\noindent An'alogamente, la desigualdad $|x|\geq k$ es equivalente a
+$ x\geq k$ o $ -x\geq k$.
+En la figura siguiente los valores de $x$
+ que satisfacen
+las desigualdades son los que se encuentran antes,  o son iguales,  a $-k$ o despu'es, o son iguales, a $k$. El conjunto $(-k,k)=\{x\in\rr\, |\, -k < x < k\}$ le llamamos un {\bf intervalo abierto}, ya que no contiene a $k$ y $-k$, es decir, un intervalo abierto es aquel que no contiene sus puntos extremos.\index{Intervalo!abierto}  Con esta definici'on vemos que el conjunto de las $x$ que cumplen que $|x|\geq k$, son los valores de $x \notin (-k,k)$. 
+
+
+\centerline{
+ \begin{pspicture}(6,0)(7,4)
+ \psset{unit=1cm}
+ \psline(2,1)(4,1)
+ \psset{linewidth=2.5pt}
+ \psline(1,1)(2,1)
+ \psline(4,1)(5,1)
+ \rput{0}(2,.5){\large $-k$}
+ \rput{0}(4,.5){\large $k$}
+ \rput{0}(3,.5){ $O$}
+ \rput{0}(3,1){$|$}
+ \rput{0}(2,1){\large ]}
+ \rput{0}(4,1){\large [}
+ \end{pspicture}
+}
+
+\index{Plano Cartesiano}
+
+\begin{ejemplo}
+\noindent  Encontremos, en el plano cartesiano\footnote{El {\bf plano 
+cartesiano} se define como $\rr^2=\rr \times \rr=\{(x,y) \,|\,x\in\rr, y \in\rr\}$.}, el 'area
+encerrada por la gr'afica de la relaci'on $|x|+|y|=1$.
+\end{ejemplo}
+\noindent Para $|x|+|y|=1$ tenemos que considerar cuatro casos:
+\begin{description}
+\item[$(a)$] $x\geq 0$ y $y\geq 0$ lo que implica que $x+y=1$, es decir, $y=1-x$.
+\item[$(b)$] $x\geq 0$ y $y < 0$ lo que implica que $x-y=1$, es decir, $y=x-1$.
+\item[$(c)$] $x < 0$ y $y \geq 0$ lo que implica que $-x+y=1$, es decir, $y=x+1$.
+\item[$(d)$] $x< 0$ y $y < 0$ lo que implica que $-x-y=1$, es decir, $y=-x-1$.
+\end{description}
+
+\noindent Podemos ahora dibujar la gr\'afica.
+
+\centerline{
+      \psset{unit=1cm}
+      \begin{pspicture}(0,0)(4,4.5)
+     % \psgrid(4,4)
+       \psline(0,2.5)(3,2.5)
+       \psline(1.5,1)(1.5,4)	
+       \psline(0,2)(2,4)
+	\psline(1,4)(3,2)
+ 	\psline(3,3)(1,1)
+	\psline(2,1)(0,3)
+	 \rput{0}(-.4,2.7){\scriptsize{$(-1,0)$}}
+       \rput{0}(2.1,3.6){\scriptsize{$(0,1)$}}
+       \rput{0}(3.3,2.7){\scriptsize{$(1,0)$}}
+       \rput{0}(2.2,1.4){\scriptsize{$(0,-1)$}}	
+       \end{pspicture}
+}
+
+\noindent El 'area encerrada por las cuatro rectas est\'a formada por
+cuatro tri\'angulos rect\'angulos is'osceles, que tienen cada uno, dos lados iguales a $1$. Como el \'area de
+cada uno de estos tri\'angulos es $\frac{1\times 1}{2}=\frac{1}{2}$,  el \'area del cuadrado es $4\left (\frac{1}{2}\right )=2$.
+
+\begin{ejemplo}
+Resolvamos la ecuaci'on $|2x-4|=|x+5|$.
+\end{ejemplo}
+\noindent Tenemos que
+\begin{equation*}
+    |2x-4|=\left \{\begin{array}{lr}
+    		 2x-4, & \makebox[1cm]{si} x\geq 2,\\[2mm]	
+                 -2x+4, &\makebox[1cm]{si}  x< 2.
+                \end{array}\right.
+\end{equation*}
+Adem'as, tenemos que
+\begin{equation*}
+    |x+5|=\left \{\begin{array}{lr}
+                 x+5, &\makebox[1cm]{si}  x\geq -5,\\[2mm]
+                 -x-5, & \makebox[1cm]{si} x< -5.
+                \end{array}\right.
+\end{equation*}
+Si $x\geq 2$, entonces $2x-4=x+5$, es decir, $x=9$. Si $x<-5$, entonces
+$-2x+4=-x-5$, de donde $x=9$, lo cual es imposible ya que $x<-5$. El 'ultimo caso que nos falta considerar es
+ $-5\leq x<2$, entonces la ecuaci'on que tenemos que resolver es $-2x+4=x+5$,
+despejando $x$, tenemos que $x=-\frac{1}{3}$. Por lo tanto, los n'umeros que resuelven la ecuaci'on son $x=9$ y $x=-\frac{1}{3}$.
+
+\vei
+
+\noindent Muchas veces es m'as f'acil resolver estas ecuaciones sin
+utilizar la forma expl'icita del valor absoluto,
+si observamos que $|a|=|b|$ si y s'olo si $a=\pm b$ y utilizamos las propiedades del valor absoluto.
+
+\vei
+
+
+\begin{observacion}
+Si $x$ es un n'umero real cualquiera, entonces la
+relaci'on entre la ra'iz cuadrada y el valor absoluto est'a dada por
+$\sqrt{x^2}=|x|$,
+la identidad se sigue de que  $|x|^2=x^2$ y $|x|\geq 0$.	
+\end{observacion}
+
+\index{Valor absoluto!propiedades del}
+
+\begin{propiedades}
+Si $x$ y $y$ son n'umeros reales, se cumple lo siguiente:
+\begin{description}
+\item[$(a)$] $|xy|=|x||y|$. De aqu'i se sigue  tambi'en que $\left |\frac{x}{y}\right |=
+\frac{|x|}{|y|}$, si $y\neq 0$.
+\item [$(b)$] $|x+y|\leq |x|+|y|$, donde la igualdad se da si y s'olo si $xy\geq 0$.
+\end{description}
+\label{desigualdadesabsolut}
+\end{propiedades}
+
+
+\demostracion{$(a)$ La demostraci'on es directa de $|xy|^2=(xy)^2=x^2y^2=|x|^2|y|^2$, 
+y ahora sacando ra'iz obtenemos el resultado.
+
+$(b)$ Como ambos lados de la desigualdad son n\'umeros positivos,
+bastar\'a entonces verificar que
+$\left|x+y\right| ^{2}\leq \left( \left| x\right| +\left| y\right|
+\right)^{2}$.
+\begin{eqnarray*}
+\left| x+y\right| ^{2} & = & (x+y)^{2}=x^{2}+2xy+y^{2}=\left| x\right|
+^{2}+2xy+\left| y\right| ^{2}\\
+& \leq & \left| x\right| ^{2}+2\left| xy\right|
++\left| y\right| ^{2}
+ =  \left| x\right| ^{2}+2\left| x\right| \left| y\right| +\left| y\right|
+^{2}=\left( \left| x\right| +\left| y\right| \right) ^{2}.
+\end{eqnarray*}
+\noindent En las relaciones anteriores hay una sola desigualdad y \'esta es
+inmediata ya que  $xy\leq \left| xy\right|$. Adem'as, obtenemos la igualdad si y s'olo si $xy=|xy|$ que sucede 'unicamente cuando  $xy\geq 0$.
+}
+
+\noindent  La desigualdad $(b)$ en \ref{desigualdadesabsolut} se puede extender en una forma general
+como,
+$$
+|\pm x_1\pm x_2\pm\cdots\pm x_n|\leq |x_1|+|x_2|+\cdots+|x_n|,
+$$
+para n'umeros reales $x_1$, $x_2$, $\dots$, $x_n$.
+La igualdad se tiene cuando todos los $\pm x_i$
+tienen el mismo signo.
+'Esta se demuestra de manera similar, 
+o bien por inducci\'on\footnote{Ver secci'on \ref{cap3sec1}, para ver
+demostraciones por inducci\'on.}.
+
+\vei
+
+
+
+\input{preliminares2-1.tex}

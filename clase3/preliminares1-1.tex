@@ -1,0 +1,258 @@
+%%%1
+\ejercpreliminares{Muestre las siguientes afirmaciones:
+\label{maspormas}
+\begin{description}
+\item[$ (i)$] Si $a<0$, $b<0$, entonces $ab>0$.
+
+\ven
+
+\item[$ (ii)$] Si $a<0$, $b>0$, entonces $ab<0$.
+
+\ven
+
+\item[$ (iii)$] Si $a<b$, $b<c$, entonces $a<c$.
+
+\ven
+
+\item[$ (iv)$] Si $a<b$, $c<d$, entonces $a+c<b+d$.
+
+\ven
+
+
+\item[$ (v)$] Si $a>0$, entonces $a^{-1}>0$.
+
+\ven
+
+\item[$ (vi)$]  Si $a<0$, entonces $a^{-1} <0$.
+\end{description}
+}
+
+\solcpreliminares{$(i)$ Si $a<0$, entonces $-a>0$. Use
+tambi\'en que $(-a)(-b)=ab$. 
+$(ii)$ $(-a)b>0$. 
+$(iii)$ $a<b\Leftrightarrow b-a>0$, use ahora la propiedad \ref{propsuma}. 
+$(iv)$ Use la propiedad \ref{propsuma}. 
+$(v)$ $aa^{-1}=1>0$. 
+$(vi)$ Si $a<0$, entonces $-a>0$.
+}
+
+
+%%%%%%% 2
+\ejercpreliminares{Sean $a$, $b$ n\'{u}meros reales.  Muestre que, si 
+$a+b$, $a^2+b$ y $a+b^2$ son n'umeros racionales y $a+b\neq 1$, entonces 
+$a$ y $b$ son n'umeros racionales.
+}
+
+\solcpreliminares{Observe que si $a^2+b-(a+b^2)\in \qq$, entonces
+$(a-b)(a+b-1)\in \qq$ y como $a+b-1\in \qq\setminus\{0\}$, entonces 
+$(a-b)\in \qq$. Luego, si $a+b\in\qq$ y $a-b\in \qq$, entonces $2a$ y 
+$2b$ est'an en $\qq$. Por lo tanto, $a$ y $b$ son n'umeros racionales.
+}
+
+%%%%%%%%% 3
+\ejercpreliminares{Sean $a, b$ n\'{u}meros reales tales que 
+$a^2+b^2$, $a^3+b^3$ y $a^4+b^4$ son  n'umeros racionales.  Muestre que 
+$a+b$, $ab$ son tambi'en  n'umeros racionales.
+
+}
+
+\solcpreliminares{Si $a=0$ o $ b=0$ el resultado es claro. 
+Suponga entonces que $ab\neq 0$. Como $(a^2+b^2)^2-(a^4+b^4)=2a^2b^2$, 
+se tiene que $a^2b^2\in\qq$.  Note que $a^6+b^6=(a^2+b^2)^3-
+3a^2b^2(a^2+b^2)\in\qq$, por lo que $(a^3+b^3)^2-(a^6+b^6)=2a^3b^3\in\qq$. 
+Luego, 
+$$
+  ab= \frac{a^3b^3}{a^2b^2}\in \qq\quad \text{y}\quad 
+ a+b= \frac{a^3+b^3}{a^2+b^2-ab}\in\qq.
+$$
+}
+
+%%%%%%%%% 4
+\ejercpreliminares{$(i)$\, Demuestre que si $p$ es un n'umero primo, 
+entonces $\sqrt{p}$ es un n'umero irracional.
+
+$(ii)$\, Demuestre que si $m$ es un n'umero entero positivo que no 
+es cuadrado perfecto, entonces $\sqrt{m}$ es un n'umero irracional.
+}
+
+\solcpreliminares{$(i)$ Suponga que $\sqrt{p}$ no es un n'umero irracional, 
+es decir, \linebreak $\sqrt{p}=\frac{m}{n}$, donde $m$, $n$ son n'umeros enteros 
+con $(m,n)=1$, es decir, $m$ y $n$ primos relativos. Elevando al cuadrado, 
+se tiene $p n^2=m^2$, esto es, $p$ divide a $m^2$, entonces $p$ divide a $m$.  
+Por lo que  $m=ps$ y  $pn^2 = p^2 s^2$ implican que   $n^2 = p s^2$, lo cual 
+garantiza que $p$ divide a $n^2$ y entonces divide a  $n$. Luego, $p$ divide 
+a $m$ y a $n$ contradiciendo el hecho de que  $m$ y $n$ son primos relativos. 
+
+$(ii)$ Suponga que $\sqrt{m}$ no es un n'umero irracional, 
+es decir, $\sqrt{m}=\frac{r}{s}$, donde $r$, $s$ son n'umeros enteros 
+con $(r,s)=1$. Elevando al cuadrado 
+se tiene $m s^2=r^2$. Como $m$ no es un cuadrado perfecto, tiene un factor 
+de la forma $p^{\alpha}$, donde $p$ es un n'umero primo y $\alpha$ es un 
+entero positivo impar. Entonces, $p^{\alpha}$ divide a $r^2$ lo que implica que 
+el primo $p$ aparece un n'umero par de veces en la descomposici'on de factores 
+de $r^2$. Como $r$ y $s$ son primos relativos, $p$ no divide a $s$, de donde
+$p$ aparece un n'umero impar de veces como factor de $m s^2$, lo cual es una 
+contradicci'on.
+}
+
+%%%%5
+\ejercpreliminares{Demuestre que existen una infinidad de parejas de n'umeros 
+irracionales $a$, $b$ tales que $a+b=ab$ y adem'as este n'umero es entero.
+}
+
+\solcpreliminares{Si $a+b=ab=n$, entonces $b=n-a$ y $n=a(n-a)$.  
+La 'ultima ecuaci'on es equivalente a $a^2-na+n=0$ y resolviendo se obtiene que
+$$
+ a=\frac{n\pm\sqrt{n^2-4n}}{2},
+\quad\text{de donde }\quad b=\frac{n\mp\sqrt{n^2-4n}}{2}.
+$$
+Para $n\geq 5$, se tiene que 
+$ (n-3)^2 <n^2-4n <(n-2)^2,$
+por lo que $\sqrt{n^2-4n}$ es un  n'umero irracional, y entonces $a$ y 
+$b$ son n'umeros irracionales.
+}
+
+%%%%% 6
+\ejercpreliminares{Si los coeficientes de 
+$$
+   a x^2+b x+c =0
+$$
+son n'umeros enteros impares, entonces las ra'ices de la ecuaci'on 
+no pueden ser n'umeros racionales.
+}
+
+\solcpreliminares{Suponga que $\frac{m}{n}$ es  ra'iz,  con $(m,n)=1$. 
+Entonces $m$ y $n$ no pueden ser  ambos pares.  Por otro lado, como 
+$a \left (\frac{m}{n}\right )^2+b \left (\frac{m}{n}\right )+c =0$,
+se tiene que $ a m^2+b mn+c n^2 =0$. El lado derecho de la  'ultima 
+ecuaci'on  es par y el izquierdo siempre es impar. Si  $m$ y $n$ son 
+impares, los tres sumandos del lado izquierdo son impares. Ahora bien,  
+si uno de ellos es par y el otro impar, entonces dos sumandos son pares, 
+el tercero impar y la suma es impar nuevamente. Esta contradicci'on 
+implica que la ecuaci'on no puede tener ra'ices racionales. 
+
+\vei 
+
+\ssolucion{El discriminante $b^2 - 4 ac$ deber'a ser un cuadrado 
+perfecto. Pero como $a$, $b$ y $c$ son impares, se puede mostrar que
+$b^2 - 4 ac\equiv 5$ $\mod 8$. Sin embargo, los cuadrados de 
+n'umeros impares s'olo dejan residuo 1 m'odulo 8.}
+}
+
+%%%%%%%%%% 7
+\ejercpreliminares{Muestre que para n'umeros reales positivos 
+$a$ y $b$, con $\sqrt{b} < a$, se tiene que
+$$
+\sqrt{a+\sqrt{b}}=\sqrt{\frac{a+\sqrt{a^{2}-b}}{2}}+
+\sqrt{\frac{a-\sqrt{a^{2}-b}}{2}}.
+$$
+}
+
+\solcpreliminares{Sea $u=a+\sqrt{b}$ y $v=a-\sqrt{b}$, entonces
+\begin{eqnarray*}
+ \sqrt{a+\sqrt{b}}& = & \sqrt{u}=\frac{\sqrt{u}+\sqrt{v}}{2} + 
+\frac{\sqrt{u}-\sqrt{v}}{2}\\
+& = & \sqrt {\frac{(\sqrt{u}+\sqrt{v})^2}{4}} + 
+\sqrt {\frac{(\sqrt{u}-\sqrt{v})^2}{4}}\\
+& = & \sqrt {\frac{\frac{u+v}{2}+\sqrt{uv}}{2}} 
++\sqrt {\frac{\frac{u+v}{2}-\sqrt{uv}}{2}}\\
+& = & \sqrt {\frac{\frac{a+\sqrt{b}+a-\sqrt{b}}{2}+
+\sqrt{a^2-b}}{2}} +\sqrt {\frac{\frac{a+\sqrt{b}+a-
+\sqrt{b}}{2}-\sqrt{a^2-b}}{2}}\\
+& = & \sqrt {\frac{a+\sqrt{a^2-b}}{2}} 
++\sqrt {\frac{a-\sqrt{a^2-b}}{2}},
+\end{eqnarray*}
+como se quer'ia probar. 
+}
+
+%%%%%%% 8
+\ejercpreliminares{Para n\'{u}meros positivos $a$ y $b$ 
+encuentre el valor de:
+
+\vei
+
+\noindent $(i)$ $\sqrt{a\sqrt{a\sqrt{a\sqrt{a \dots}}}}.$ 
+\qquad \qquad \qquad 
+$(ii)$ $\sqrt{a\sqrt{b\sqrt{a\sqrt{b\dots}}}}.$
+}
+
+\solcpreliminares{$(i)$ Sea $x=\sqrt{a\sqrt{a\sqrt{a\sqrt{a \dots}}}}$, 
+entonces $x^2=a\sqrt{a\sqrt{a\sqrt{a\sqrt{a \dots}}}}$, de donde $x^2=ax$. 
+Factorizando, $x(x-a)=0$.  Por lo tanto, como $a$ es positivo la soluci'on 
+es $x=a$.
+
+\vei
+
+\ssolucion{Podemos dar otra soluci'on utilizando series.  Tenemos que 
+$$
+     x=a^{\frac{1}{2}}a^{\frac{1}{4}}a^{\frac{1}{8}}\ldots=a^{\frac{1}{2}+\frac{1}{4}+\frac{1}{8}
++\cdots}= a,
+$$
+ya que $\sum_{j=1}^{\infty} \frac{1}{2^j}=1$, ver la secci'on 
+\ref{seriesdepotencia}.
+}
+
+$(ii)$ Sea $x=\sqrt{a\sqrt{b\sqrt{a\sqrt{b\dots}}}}$, entonces 
+$x^2=a\sqrt{b\sqrt{a\sqrt{b\sqrt{a\dots}}}}$, de donde 
+$x^4=a^2 b x$. Como  $x\neq 0$, $x^3=a^2 b$. Entonces $x=\sqrt[3]{a^2b}$.
+
+\vei
+
+\ssolucion{Podemos tambi'en hacer otra soluci'on utilizando series.  
+Tenemos que 
+$$
+     x=a^{\frac{1}{2}+\frac{1}{8}+\frac{1}{32}+\cdots}\, 
+b^{\frac{1}{4}+\frac{1}{16}+\frac{1}{64}+\cdots}=a^{\frac{2}{3}}\,b^{\frac{1}{3}},
+$$
+ya que $\sum_{j=1}^{\infty} \frac{1}{2^{2j}}=\frac{1}{3}$ y 
+$\sum_{j=0}^{\infty} \frac{1}{2^{2j+1}}=\frac{2}{3}$, ver la secci'on 
+\ref{seriesdepotencia}. 
+}
+}
+
+%%%%% 9
+\ejercpreliminares{(Rumania, 2001) Sean  $x$, $y$ y $z$ n'umeros 
+reales distintos de cero tales que
+$xy$, $yz$ y $zx$ son n'umeros racionales. Muestre que:
+
+$(i)$ $x^2+y^2+z^2$ es un n'umero racional.
+
+$(ii)$ Si $x^3+y^3+z^3$ es un n'umero racional distinto de cero, 
+entonces 
+$x$, $y$ y $z$ son n'umeros racionales.
+}
+
+\solcpreliminares{$(i)$ Si $xy$, $yz$  y $zx$ est'an en $\qq$, 
+entonces $\frac{(xy)(zx)}{yz}=x^2\in\qq$.  An'alogamente, 
+$y^2$, $z^2$ $\in \qq$. Por lo tanto, $x^2+y^2+z^2\in\qq$.
+
+$(ii)$ Por  $(i)$ se tiene que  $(x^2)^2+(xy)y^2+(xz) 
+z^2=x(x^3+y^3+z^3)\in \qq$, luego  $x\in \qq$.  
+An'alogamente, $y$, $z$ $\in \qq$. 
+}
+
+%%%%%%% 10
+\ejercpreliminares{(Rumania, 2011) Sean $a$, $b$ n\'{u}meros reales 
+positivos y distintos, tales que $a-\sqrt{ab}$ y $b-\sqrt{ab}$ 
+son ambos n'umeros racionales. Muestre que $a$ y $b$ son  
+n'umeros racionales.
+}
+
+\solcpreliminares{Como $a-\sqrt{ab}=a\left( 1-\frac{\sqrt{b}}{\sqrt{a}}\right)$,
+bastar'a ver que  $1-\frac{\sqrt{b}}{\sqrt{a}}$ es un  n'umero 
+racional distinto de cero para asegurar que $a$ es un  n'umero racional. 
+
+\noindent Pero $ \frac{b-\sqrt{ab}}{a-\sqrt{ab}}=
+\frac{\sqrt{b}(\sqrt{b}-\sqrt{a})}{\sqrt{a}(\sqrt{a}-\sqrt{b})}= 
+-\frac{\sqrt{b}}{\sqrt{a}}$ 
+es un  n'umero  racional diferente de $-1$ (ya que $a\neq b$), 
+luego $1-\frac{\sqrt{b}}{\sqrt{a}}$ es un  n'umero racional 
+distinto de 0. An'alogamente, $b$ es un  n'umero racional.
+}
+
+
+
+
+
+
+
