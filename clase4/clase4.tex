@@ -1,0 +1,353 @@
+\documentclass [spanish,12pt]{article}
+\usepackage[activeacute]{babel}
+\usepackage{array}
+\usepackage{delarray}
+\usepackage{hhline}
+%\usepackage{shapepar}
+%\usepackage{picinpar}
+\usepackage{enumerate}
+\usepackage{endnotes}
+\usepackage{multicol}
+\setlength{\topmargin}{ -0.4in} \setlength{\oddsidemargin}{0.1in}
+\setlength{\textheight}{8.9in} \setlength{\textwidth}{6.5in}
+\newcommand{\noin}{\noindent}
+\newcommand{\spi}{\vskip .05 in}
+\pagestyle{plain}
+%  \usepackage{graphics}
+  \usepackage{amsmath}
+  \usepackage{amssymb}
+%  \usepackage[all]{xy}
+%\usepackage{graphicx}
+%\usepackage[dvips]{color}
+%\usepackage{graphicx,color}
+\usepackage[dvips]{graphicx}
+\usepackage{epsfig}
+\usepackage{graphicx,color}
+\include{psfig}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%\newtheorem{ejemplo}[teorema]{Ejemplo}
+
+\begin{document}
+
+\section{Material de Tabulaciones}
+
+\subsection{Ejemplos de comandos de preambulo}
+
+\begin{center}
+
+%>{\large}c significa que lo haga largo y lo centre
+%>{\bfseries}l que lo ponga en negrito y a la izquierda
+%>{\itshape}c que lo haga en italico y centrado
+\begin{tabular}{| >{\large}c | >{\bfseries}l | >{\itshape} c |}
+\hline A & B & C \\
+\hline 100 & 10 & 1 \\
+\hline
+\end{tabular}
+
+\end{center}
+
+
+\vspace{.1in}
+
+\begin{center}
+
+%define la long entre la letra y el arreglo, tiene una altura extra al renglon
+\setlength{\extrarowheight}{4pt}
+\begin{tabular}{| >{\large}c | >{\bfseries}l | >{\itshape} c |}
+\hline A & B & C \\
+\hline 100 & 10 & 1 \\
+\hline
+\end{tabular}
+
+\end{center}
+
+\vspace{.1in}
+
+\begin{center}
+%p{1.2cm} le da distancia a la celda la p los manda hacia arriba
+\begin{tabular}{|p{2cm}|p{1cm}|p{1cm}|}
+\hline 1 1 1 1 1 1 1 1 1 1 1 1  &
+       2 2 2 2 2 2 2 2 2        & 3 3 3 3 \\
+\hline
+\end{tabular} 
+
+\end{center}
+
+\vspace{.1in}
+
+\begin{center}
+%m{1.2cm} le da distancia a la celda la p los manda hacia en medio
+\begin{tabular}{|m{1.2cm}|m{1cm}|m{1cm}|}
+\hline 1 1 1 1 1 1 1 1 1 1 1 1  &
+       2 2 2 2 2 2 2 2 2        & 3 3 3 3 \\
+\hline
+\end{tabular} 
+
+\end{center}
+
+\vspace{.1in}
+
+\begin{center}
+%la b los manda hacia abajo
+\begin{tabular}{|b{1.2cm}|b{1.2cm}|b{1cm}|}
+\hline 1 1 1 1 1 1 1 1 1 1 1 1  &
+       2 2 2 2 2 2 2 2 2        & 3 3 3 3 \\
+\hline
+\end{tabular} 
+\end{center}
+
+\vspace{.1in}
+
+\begin{center} 
+\begin{tabular}
+%{|>{\setlength{\parindent}{5mm}}p{2cm} la primer columna tendra sangria de 5mm y lo mandara hacia arriba
+{|>{\setlength{\parindent}{5mm}}p{2cm}|p{2cm}|}
+\hline 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 &
+1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 \\
+\hline
+\end{tabular} 
+\end{center}
+
+\vspace{.1in}
+
+ 
+\setlength{\extrarowheight}{2pt}
+%arreglo con simbolos matematicos
+%\[ este simbolo es igual a && para centrar cosas matematicas y se cierra \]
+%|l| primer columna a la izq
+%>{$}l significa que no aparecera en forma matematica  y a la izq
+\[ \begin{array}{|l| >{$}l < {$}|}
+\hline 
+10!^{10!}  & a big number \\
+10^{-999}  & a small number \\ 
+\hline \end{array} \]
+
+\vspace{.1in}
+
+%fbox 
+\begin{tabular}{r@{\hspace{5mm}}l}
+\fbox{LEFT BOX} & \fbox{RIGHT BOX}
+\end{tabular}
+
+%\hspace es el espacio entre los dos cuadritos
+
+\par \vspace{\baselineskip} \par
+\begin{tabular}{r!{\hspace{5mm}}l}
+\fbox{LEFT BOX} & \fbox{RIGHT BOX}
+\end{tabular}
+
+\subsubsection{Ancho variable de las lineas verticales}
+
+\begin{center}
+%tabula,centra signo de admiracion para la sig instrcuccion y sirve para lo que vas a escriir %despues
+
+%la instruccionen es pra hacer una linea gruesa
+\begin{tabular}{|c!{\vrule width 3pt}c|c|}
+\hline
+A  &  B  &  C \\ \hline
+100 & 10 & 1 \\ \hline
+\end{tabular}
+
+\end{center}
+
+\subsubsection{Controlando la separaci\'on horizontal entre columnas}
+
+
+\begin{tabular}{ll} %%%parte que varia, alineada left left
+BOXES & BOXES \\
+BOXES & BOXES \\
+\end{tabular}
+
+
+\begin{tabular}{@{}ll@{}} %%%parte que varia aqui le deja un espacion extra con @ {} y hay no %pone nada
+BOXES & BOXES \\
+BOXES & BOXES \\
+\end{tabular}
+
+
+\begin{tabular}{@{}l@{}l@{}} %%%parte que varia espacio entre left left y como no pone nada lo %junta, tambien si pone phantom borra el espacio
+BOXES & BOXES \\
+BOXES & BOXES \\
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{|l|l|} %%%parte que varia
+\hline
+BOXES & BOXES \\ \hline
+BOXES & BOXES \\ \hline
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{|@{}l|l@{}|} %%%parte que varia
+\hline
+BOXES & BOXES \\ \hline
+BOXES & BOXES \\ \hline
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{|@{}l@{}|l@{}|} %%%parte que varia
+\hline
+BOXES & BOXES \\ \hline
+BOXES & BOXES \\ \hline
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{|@{}l@{}|@{}l@{}|} %%%parte que varia
+\hline
+BOXES & BOXES \\ \hline
+BOXES & BOXES \\ \hline
+\end{tabular}
+
+\vspace{.2in}
+
+\begin{tabular}{||l||l||} %%%parte que varia
+\hline \hline
+BOXES & BOXES \\ \hline \hline
+BOXES & BOXES \\ \hline \hline
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{||@{}l||l@{}||} %%%parte que varia
+\hline \hline
+BOXES & BOXES \\ \hline \hline
+BOXES & BOXES \\ \hline \hline
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{||@{}l@{}||l@{}||} %%%parte que varia
+\hline \hline
+BOXES & BOXES \\ \hline \hline
+BOXES & BOXES \\ \hline \hline
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{||@{}l@{}||@{}l@{}||} %%%parte que varia
+\hline \hline
+BOXES & BOXES \\ \hline \hline
+BOXES & BOXES \\ \hline \hline
+\end{tabular}
+
+\vspace{.1in}
+
+\begin{tabular}{|@{}|@{}l@{}|@{}|@{}l@{}|@{}|} %%%parte que varia
+\hline \hline
+BOXES & BOXES \\ \hline \hline
+BOXES & BOXES \\ \hline \hline
+\end{tabular}
+
+
+\subsection{Especificando limites en un arreglo}
+%matriz normal ({cc}) que este centrada y los parentesis de lado
+\[
+\begin{array} \{{cc}\}
+A & B \\
+C & D 
+\end{array}
+\]
+
+\vspace{.1in}
+
+%podemos cambiar el environment de array para modificarlos
+%y define un nuevo tipo de columna L
+\newcolumntype{L}{>{$}l<{$}} %%se olvida de lo matematico que esta dentro
+%este newenviroment es para una funcion con dos casos, {lL} significa que una columna es a la %izq y la otra es L que no sea matematico el .} que sigue es para cerrar ese tipo de fnc
+\newenvironment{Cases}{\begin{array}\{ {lL}.}{\end{array}}
+%%es para escribir matrices, |{*{20}{c}}| es para el tamaño el *20
+\newenvironment{Matrix}{\begin{array}|{*{20}{c}}|}{\end{array}}
+
+\newenvironment{Pmatrix}{\begin{array}({*{20}{c}})}{\end{array}}
+
+
+%% como L no es matematico y quieres poner cosas matematicas dentro usas los $$
+%% 2mm es el espacio que deja entre las columnas
+\[ 
+|x| = \begin{Cases}
+x, & if $x \geq 0$; \\[2mm] 
+-x, & otherwise. \\
+\end{Cases}
+\]
+
+
+\vspace{.1in}
+
+\[ a = {\begin{Matrix}
+x - \lambda & 1 & 0 \\
+0 & x -\lambda & 1 \\
+0 & 0 & x -\lambda \\
+\end{Matrix}
+}^2
+\]
+
+\vspace{.1in}
+
+\[ A = \begin{Pmatrix}
+x - \lambda & 1 & 0 \\
+0 & x -\lambda & 1 \\
+0 & 0 & x -\lambda \\
+\end{Pmatrix}
+\]
+
+\vspace{.1in}
+
+%[t] es para un arreglo de una sola columna centrado al top
+%[c] es para "" center
+%[b] es para "" boton
+%manda todo el array no solo los numeros
+
+\[ \begin{array}[t]({c})1\\2\\3 \end{array}
+ \begin{array}[c]({c})1\\2\\3 \end{array}
+ \begin{array}[b]({c})1\\2\\3 \end{array}
+\]
+
+\vspace{.1in}
+%este es a la izq centrado al top, center, boton, solo manda el espacio
+\[  \left(
+\begin{array}[t]{c}1\\2\\3\end{array}
+\right)
+\left(
+\begin{array}[c]{c}1\\2\\3\end{array}
+\right)
+\left(
+\begin{array}[b]{c}1\\2\\3\end{array}
+\right)
+\]
+
+\subsection{Combinando lineas verticales y horizontales}
+
+Con la instrucci'on $\backslash$hhline se tienen los argumentos:
+
+\begin{itemize}     %\backslash escribe esto \
+\item[=] Genera una $\backslash$hline doble el ancho de la columna
+\item[-] Genera una $\backslash$hline sencilla el ancho de la columna
+\item[$\thicksim$] Genera una columna sin $\backslash$hline, es decir, un espacio del 
+ancho de la columna.
+\item[$|$] Genera una $\backslash$vline que corta atraves de una 
+$\backslash$hline sencilla o doble
+\item[:] Genera una $\backslash$vline que es rota por por una 
+$\backslash$hline doble.
+\item[$\sharp$] Genera un segmento $\backslash$hline doble entre dos 
+$\backslash$vlines
+\item[t] La parte superior de un segmento $\backslash$hline doble
+\item[b] La parte inferior de un segmento $\backslash$hline doble
+\end{itemize}
+
+\setlength{\arrayrulewidth}{.8pt} %%que tan gruesa es la linea
+\begin{tabular}{||cc||c|c||}
+%%primero lo cierra, luego dibuja | luego pone t que es doble, luego : rompe la |
+\hhline{|t:==:t:==:t|} 
+a & b & c & d \\ \hhline{|:==:|~|~||}
+1 & 2 & 3 & 4 \\ \hhline{#==#~|=#}
+i & j & k & l \\ \hhline{||--||--||}
+w & x & y & z \\ \hhline{|b:==:b:==:b|}
+\end{tabular}
+
+
+\end{document}
