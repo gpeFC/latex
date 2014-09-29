@@ -63,24 +63,100 @@
 \subsubsection{Overset, underset, sideset}
 
 \subsubsection{El comando smash}
+Sin el comando -smash-.
+$ x_j = (|/\sqrt{\lambda_j})x_j' $
+\\ \\
+Con el comando -smash-.
+$ x_j = (|/\sqrt{\smash[b]{\lambda_j}})x_j' $
+
 
 \subsubsection{El comando text}
 
 \subsubsection{Nombres de operadores}
 
 \subsubsection{Mod y sus parientes}
+$ u \equiv v+1 \pmod{n^2} $
+\\
+$ u \equiv v+1 \mod{n^2} $
+\\
+$ u \equiv v+1 \pod{n^2} $
 
 \subsubsection{Fracciones y construcciones relacionadas}
 
 \subsubsection{Fracciones Continuas}
 
+\begin{equation}
+\cfrac{1}{\sqrt{2}+
+\cfrac{1}{\sqrt{3}+
+\cfrac{1}{\sqrt{4}+
+\cfrac{1}{\sqrt{5}}}}}
+\end{equation}
+
+
 \subsubsection{Par\'entesis grandes}
 
 \subsection{Ambientes de matrices y de diagramas conmutativos} 
 
+Ambiente0:\\
+$ \sum_{n<k, \ n \mbox{impar}}nE_n $
+\\ \\
+Ambiente0-1:\\
+$ \sum_{n<k, \ n \mbox{impar}}nE_n $
+
 \subsubsection{El ambiente casos}
+Ecuaciones:\\
+\begin{equation*}
+\begin{split}
+(a+b)^n = & \sum_{k=0}^n \binom{n}{k}a^kb^{n-k} = a^n + \binom{n}{1}a^{n-1} \\
+& + \binom{n}{2}a^{n-2}b^2+\cdots \\
+& + \cdots + \\
+& + \binom{n}{k}a^{n-k}b^k \cdots \\
+& + \binom{n}{n-1}ab^n
+\end{split}
+\end{equation*}
+
 
 \subsubsection{Los ambientes para matrices}
+Matriz simple:\\
+$$
+\begin{matrix}
+0 & 1 \\
+1 & 0
+\end{matrix}
+$$
+\\
+Matriz normal:\\
+$$
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
+\\
+Matriz cuadrada:\\
+$$
+\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}
+$$
+\\
+Matriz barra:\\
+$$
+\begin{vmatrix}
+0 & 1 \\
+1 & 0
+\end{vmatrix}
+$$
+\\
+Matriz doble barra:\\
+$$
+\begin{Vmatrix}
+0 & 1 \\
+1 & 0
+\end{Vmatrix}
+$$
+
 
 
 \end{document}
